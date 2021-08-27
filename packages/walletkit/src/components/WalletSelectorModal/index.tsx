@@ -40,9 +40,13 @@ export const WalletSelectorModal: React.FC<Props> = ({
 
   const onDismiss = () => {
     modalProps.onDismiss();
-    setInstallProvider(null);
-    setWalletToConnect(null);
-    setStep(ModalStep.Intro);
+
+    // unset everything else after the modal unhide animation
+    setTimeout(() => {
+      setInstallProvider(null);
+      setWalletToConnect(null);
+      setStep(ModalStep.Intro);
+    }, 500);
   };
 
   return (

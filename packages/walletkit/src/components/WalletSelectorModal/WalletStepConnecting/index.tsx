@@ -31,6 +31,10 @@ export const WalletStepConnecting: React.FC<Props> = ({
   const { activate, connected, wallet } = useSolana();
   const [error, setError] = useState<string | null>(null);
 
+  const isManualConnect =
+    isMobile &&
+    (info.type === WalletType.Sollet || info.type === WalletType.Solflare);
+
   const doActivate = useCallback(async () => {
     try {
       await activate(info.type);
@@ -42,7 +46,14 @@ export const WalletStepConnecting: React.FC<Props> = ({
 
   // attempt to activate the wallet on initial load
   useEffect(() => {
-    void doActivate();
+    if (isManualConnect) {
+      return;
+    }
+    // delay so people can see a message
+    const timeout = setTimeout(() => {
+      void doActivate();
+    }, 500);
+    return () => clearTimeout(timeout);
     // only run this on the first display of this modal
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -81,9 +92,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
         ) : (
           <ConnectingHeader>
             <Connecting>Connecting...</Connecting>
-            {isMobile &&
-            (info.type === WalletType.Sollet ||
-              info.type === WalletType.Solflare) ? (
+            {isManualConnect ? (
               <ConnectingInstructions>
                 Please{" "}
                 <a
@@ -116,22 +125,22 @@ export const WalletStepConnecting: React.FC<Props> = ({
             {appIcon}
           </AppIcons>
         </AppIconsWrapper>
+        <BottomArea>
+          <FooterText>
+            Having trouble?{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onBack?.();
+              }}
+            >
+              Go back
+            </a>
+          </FooterText>
+        </BottomArea>
       </ConnectingWrapper>
-      <BottomArea>
-        <FooterText>
-          Having trouble?{" "}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              onBack?.();
-            }}
-          >
-            Go back
-          </a>
-        </FooterText>
-      </BottomArea>
     </Wrapper>
   );
 };
@@ -164,7 +173,15 @@ const ConnectingInstructions = styled.p`
   color: #696969;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
 
 const AppIcons = styled.div`
   display: grid;
@@ -195,4 +212,16 @@ const ConnectingWrapper = styled.div`
 
   background: #f9f9f9;
   border-radius: 32px 32px 8px 8px;
+
+  animation: fadeIn 0.2s forwards;
+  animation-timing-function: ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      bottom: -300px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
 `;
