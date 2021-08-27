@@ -23,7 +23,7 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
   // autoredirect after 1 second
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.open(info.url, "_blank", "noopener noreferrer");
+      window.open(info.url, "_blank", "noopener");
     }, 1_000);
     return () => clearTimeout(timeout);
   });
@@ -42,7 +42,7 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
       </p>
       <ButtonWithFooter
         onClick={() => {
-          window.open(info.url, "_blank", "noopener noreferrer");
+          window.open(info.url, "_blank", "noopener");
         }}
         footer={
           <>
