@@ -1,6 +1,7 @@
 import type { WalletProviderInfo } from "@saberhq/use-solana";
-import { useSolana } from "@saberhq/use-solana";
+import { useSolana, WalletType } from "@saberhq/use-solana";
 import React, { useMemo, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 import type { WalletKitArgs } from "../../types";
 import type { ModalProps } from "../Modal";
@@ -32,7 +33,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
   const [installProvider, setInstallProvider] =
     useState<WalletProviderInfo | null>(null);
 
-  const { disconnect } = useSolana();
+  const { disconnect, activate } = useSolana();
   const [walletToConnect, setWalletToConnect] = useState<ProviderInfo | null>(
     null
   );
@@ -80,6 +81,14 @@ export const WalletSelectorModal: React.FC<Props> = ({
             disconnect();
             setWalletToConnect(info);
             setStep(ModalStep.Connecting);
+
+            if (
+              isMobile &&
+              (info.type === WalletType.Sollet ||
+                info.type === WalletType.Solflare)
+            ) {
+              void activate(info.type);
+            }
           }}
           onInstall={(info) => {
             setInstallProvider(info);

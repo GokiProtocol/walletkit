@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { useSolana } from "@saberhq/use-solana";
+import { useSolana, WalletType } from "@saberhq/use-solana";
 import { useCallback, useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 import { BottomArea, FooterText } from "../ButtonWithFooter";
 import type { ProviderInfo } from "../WalletStepSelect";
@@ -80,9 +81,32 @@ export const WalletStepConnecting: React.FC<Props> = ({
         ) : (
           <ConnectingHeader>
             <Connecting>Connecting...</Connecting>
-            <ConnectingInstructions>
-              Please unlock your {walletProviderInfo.name} wallet.
-            </ConnectingInstructions>
+            {isMobile &&
+            (info.type === WalletType.Sollet ||
+              info.type === WalletType.Solflare) ? (
+              <ConnectingInstructions>
+                Please{" "}
+                <a
+                  css={css`
+                    color: #696969;
+                    font-weight: bold;
+                  `}
+                  href="#"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    wallet?.connect();
+                  }}
+                >
+                  click here
+                </a>{" "}
+                to unlock your {walletProviderInfo.name} wallet.
+              </ConnectingInstructions>
+            ) : (
+              <ConnectingInstructions>
+                Please unlock your {walletProviderInfo.name} wallet.
+              </ConnectingInstructions>
+            )}
           </ConnectingHeader>
         )}
         <AppIconsWrapper>
