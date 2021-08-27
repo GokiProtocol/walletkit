@@ -8,5 +8,5 @@ It is intended to be used with [use-solana](https://github.com/saber-hq/saber-co
 
 ## Screenshots
 
-![Intro](/images/wallet-intro.png)
-![Select](/images/wallet-select.png)
+<img src="/images/wallet-intro.png" width="30%" />
+<img src="/images/wallet-select.png" width="30%" />
