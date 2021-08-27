@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
 import { useMemo } from "react";
 
-import { ContinueButton } from "../WalletStepIntro/ContinueButton";
+import { ButtonWithFooter } from "../ButtonWithFooter";
 
 interface Props {
   info: WalletProviderInfo;
@@ -32,13 +32,28 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
         Make sure you only install their wallet from the official{" "}
         <strong>{providerURL}</strong> website.
       </p>
-      <ContinueButton
+      <ButtonWithFooter
         onClick={() => {
           window.open(info.url, "_blank", "noopener noreferrer");
         }}
+        footer={
+          <>
+            Finished installing?{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.reload();
+              }}
+            >
+              Refresh
+            </a>
+          </>
+        }
       >
         Continue
-      </ContinueButton>
+      </ButtonWithFooter>
     </Wrapper>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { ContinueButton } from "./ContinueButton";
+import { ButtonWithFooter } from "../ButtonWithFooter";
 import { Detail } from "./Detail";
 import { BoltIcon, ConnectDots, LockIcon, SolanaIcon } from "./icons";
 
@@ -39,45 +39,26 @@ export const WalletStepIntro: React.FC<Props> = ({
           description="Solana's scalability ensures transactions remain less than $0.01 and at lightning fast speeds."
         />
       </DetailsWrapper>
-      <BottomArea>
-        <ContinueButton onClick={onContinue}>Continue</ContinueButton>
-        <FirstTime>
-          First time using Solana?{" "}
-          <a
-            href="https://solana.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Learn more
-          </a>
-        </FirstTime>
-      </BottomArea>
+      <ButtonWithFooter
+        onClick={onContinue}
+        footer={
+          <>
+            First time using Solana?{" "}
+            <a
+              href="https://solana.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Learn more
+            </a>
+          </>
+        }
+      >
+        Continue
+      </ButtonWithFooter>
     </Wrapper>
   );
 };
-
-const BottomArea = styled.div`
-  position: absolute;
-  left: 28px;
-  right: 28px;
-  bottom: 28px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-`;
-
-const FirstTime = styled.div`
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: -0.02em;
-  color: #696969;
-  & > a {
-    color: #696969;
-    font-weight: bold;
-  }
-`;
 
 const Wrapper = styled.div`
   padding: 28px;

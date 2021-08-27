@@ -18,7 +18,7 @@ export interface ModalProps {
   onDismiss: () => void;
   darkenOverlay?: boolean;
 
-  hideBackButton?: boolean;
+  onBack?: () => void;
   hideCloseButton?: boolean;
   hideSolanaLogo?: boolean;
 }
@@ -29,7 +29,7 @@ export const Modal: React.FC<ModalProps> = ({
   onDismiss,
   darkenOverlay = true,
 
-  hideBackButton = true,
+  onBack,
   hideCloseButton = false,
   hideSolanaLogo = true,
 }: ModalProps) => {
@@ -83,19 +83,19 @@ export const Modal: React.FC<ModalProps> = ({
                   : {})}
               >
                 <TopArea>
-                  {hideBackButton ? (
-                    <div />
-                  ) : (
+                  {onBack ? (
                     <ButtonIcon
                       href="#"
                       onClick={(e) => {
                         e.stopPropagation();
                         e.preventDefault();
-                        onDismiss();
+                        onBack();
                       }}
                     >
                       <BackIcon />
                     </ButtonIcon>
+                  ) : (
+                    <div />
                   )}
                   {hideSolanaLogo ? (
                     <div />
@@ -167,6 +167,10 @@ const ModalWrapper = styled(animated(DialogContent))`
   * {
     box-sizing: border-box;
   }
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
   position: relative;
 
   box-shadow: 0px 4px 16px rgba(207, 207, 207, 0.25);

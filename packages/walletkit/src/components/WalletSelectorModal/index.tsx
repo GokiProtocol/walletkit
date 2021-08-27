@@ -31,7 +31,25 @@ export const WalletSelectorModal: React.FC<Props> = ({
   return (
     <Modal
       {...modalProps}
-      hideBackButton={step === ModalStep.Intro}
+      onDismiss={() => {
+        modalProps.onDismiss();
+        setStep(ModalStep.Intro);
+        setInstallProvider(null);
+      }}
+      onBack={
+        step === ModalStep.Intro
+          ? undefined
+          : () => {
+              switch (step) {
+                case ModalStep.Select:
+                  setStep(ModalStep.Intro);
+                  break;
+                case ModalStep.Redirect:
+                  setStep(ModalStep.Select);
+                  break;
+              }
+            }
+      }
       hideSolanaLogo={step === ModalStep.Intro}
     >
       {step === ModalStep.Intro && (
