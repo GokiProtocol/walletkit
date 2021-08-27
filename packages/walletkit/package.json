@@ -1,6 +1,6 @@
 {
   "name": "@gokiprotocol/walletkit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "> TODO: description",
   "author": "Goki Rajesh <goki@goki.so>",
   "homepage": "https://github.com/GokiProtocol/walletkit#readme",
@@ -25,11 +25,11 @@
     "url": "https://github.com/GokiProtocol/walletkit/issues"
   },
   "devDependencies": {
+    "@saberhq/use-solana": "^0.14.2",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@saberhq/use-solana": "^0.14.2"
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -43,10 +43,10 @@
     "unstated-next": "^1.1.0"
   },
   "peerDependencies": {
+    "@saberhq/use-solana": "^0.14.2",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@saberhq/use-solana": "^0.14.2"
+    "react-dom": "^17.0.2"
   }
 }
