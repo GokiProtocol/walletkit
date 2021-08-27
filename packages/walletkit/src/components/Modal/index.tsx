@@ -9,7 +9,6 @@ import { isMobile } from "react-device-detect";
 import { animated, useSpring, useTransition } from "react-spring";
 import { useGesture } from "react-use-gesture";
 
-import { breakpoints } from "../../breakpoints";
 import { BackIcon, CloseIcon, SolanaLogo } from "./icons";
 
 export interface ModalProps {
@@ -177,10 +176,6 @@ const ModalWrapper = styled(animated(DialogContent))`
   width: 100%;
   max-width: 360px;
   height: 608px;
-  ${breakpoints.mobile} {
-    height: calc(100vh - 2 * 24px);
-  }
-
   border-radius: 8px;
   background: #fff;
   color: #696969;

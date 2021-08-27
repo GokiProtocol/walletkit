@@ -3,20 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@gokiprotocol/walletkit": "0.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "@gokiprotocol/walletkit": "0.0.0"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.14.5",
+    "@emotion/babel-plugin": "^11.3.0",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.2",
     "@types/react": "^17.0.19",
