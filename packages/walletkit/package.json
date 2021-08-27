@@ -4,22 +4,18 @@
   "description": "> TODO: description",
   "author": "Goki Rajesh <goki@goki.so>",
   "homepage": "https://github.com/GokiProtocol/walletkit#readme",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "main": "dist/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "files": [
-    "lib"
+    "dist/",
+    "src/"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GokiProtocol/walletkit.git"
   },
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/GokiProtocol/walletkit/issues"
