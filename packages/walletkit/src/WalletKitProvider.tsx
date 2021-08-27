@@ -1,3 +1,4 @@
+import type { UseSolanaArgs } from "@saberhq/use-solana";
 import { SolanaProvider } from "@saberhq/use-solana";
 import React, { useContext, useMemo, useState } from "react";
 
@@ -10,7 +11,7 @@ export interface WalletKit {
 
 const WalletKitContext = React.createContext<WalletKit | null>(null);
 
-interface Props extends WalletKitArgs {
+interface Props extends WalletKitArgs, UseSolanaArgs {
   children: React.ReactNode;
 }
 

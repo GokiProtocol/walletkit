@@ -1,14 +1,32 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { ConnectWalletButton } from "@gokiprotocol/walletkit";
+import { PendingTransaction } from "@saberhq/solana-contrib";
+import { createInitMintInstructions } from "@saberhq/token-utils";
 import { useConnectedWallet, useSolana } from "@saberhq/use-solana";
+import { Keypair, LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { lighten } from "polished";
+import { useCallback, useEffect, useState } from "react";
+import invariant from "tiny-invariant";
 
 import { breakpoints } from "./App";
 
 export const Body: React.FC = () => {
-  const { walletProviderInfo, disconnect } = useSolana();
+  const { walletProviderInfo, disconnect, providerMut, network, setNetwork } =
+    useSolana();
   const wallet = useConnectedWallet();
+  const [balance, setBalance] = useState<number | null>(null);
+
+  const refetchSOL = useCallback(async () => {
+    if (wallet && providerMut) {
+      setBalance(await providerMut.connection.getBalance(wallet.publicKey));
+    }
+  }, [providerMut, wallet]);
+
+  useEffect(() => {
+    void refetchSOL();
+  }, [refetchSOL]);
+
   return (
     <AppWrapper>
       <h1
@@ -45,8 +63,53 @@ export const Body: React.FC = () => {
           <ul>
             <li>Wallet key: {wallet?.publicKey?.toString()}</li>
             <li>Provider: {walletProviderInfo?.name}</li>
+            <li>Network: {network}</li>
+            <li>
+              Balance:{" "}
+              {typeof balance === "number"
+                ? `${(balance / LAMPORTS_PER_SOL).toLocaleString()} SOL`
+                : "--"}
+            </li>
           </ul>
-          <Button onClick={disconnect}>Disconnect</Button>
+          <Buttons>
+            <Button onClick={disconnect}>Disconnect</Button>
+            <Button
+              onClick={() => {
+                setNetwork("devnet");
+              }}
+            >
+              Switch to Devnet
+            </Button>
+            <Button
+              disabled={!providerMut}
+              onClick={async () => {
+                invariant(providerMut, "providerMut");
+                const txSig = await providerMut.sendConnection.requestAirdrop(
+                  providerMut.wallet.publicKey,
+                  LAMPORTS_PER_SOL
+                );
+                await new PendingTransaction(providerMut, txSig).wait();
+                await refetchSOL();
+              }}
+            >
+              Request 1 SOL
+            </Button>
+            <Button
+              disabled={!providerMut}
+              onClick={async () => {
+                invariant(providerMut, "providerMut");
+                const tx = await createInitMintInstructions({
+                  provider: providerMut,
+                  mintKP: Keypair.generate(),
+                  decimals: 9,
+                });
+                await tx.confirm();
+                await refetchSOL();
+              }}
+            >
+              Send Transaction
+            </Button>
+          </Buttons>
         </WalletInfo>
       ) : (
         <WalletInfo>
@@ -100,4 +163,10 @@ const Button = styled.button`
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 `;
