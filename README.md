@@ -6,7 +6,6 @@ WalletKit is a React library that allows a Solana dApp to display a modal for co
 
 It is intended to be used with [use-solana](https://github.com/saber-hq/saber-common/tree/master/packages/use-solana).
 
-## Screenshots
+## Usage
 
-<img src="/images/wallet-intro.png" width="30%" />
-<img src="/images/wallet-select.png" width="30%" />
+Check out the [example app](/packages/example) to understand how to use this library.
