@@ -41,10 +41,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
 
   // attempt to activate the wallet on initial load
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      void doActivate();
-    }, 500);
-    return () => clearTimeout(timeout);
+    void doActivate();
     // only run this on the first display of this modal
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
