@@ -37,14 +37,17 @@ export const WalletStepConnecting: React.FC<Props> = ({
     } catch (e) {
       setError((e as Error).message);
     }
-  }, [activate, info.type]);
+    // needed otherwise sollet, solflare doesn't work
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [info.type]);
 
+  // attempt to activate the wallet on initial load
   useEffect(() => {
     const timeout = setTimeout(() => {
       void doActivate();
     }, 500);
     return () => clearTimeout(timeout);
-  }, [doActivate]);
+  });
 
   // close modal only when the wallet is connected
   useEffect(() => {

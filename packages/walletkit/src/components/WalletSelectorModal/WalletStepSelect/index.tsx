@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import type { WalletProviderInfo, WalletType } from "@saberhq/use-solana";
-import { WALLET_PROVIDERS } from "@saberhq/use-solana";
+import type { WalletProviderInfo } from "@saberhq/use-solana";
+import { WALLET_PROVIDERS, WalletType } from "@saberhq/use-solana";
 import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -14,38 +14,42 @@ export interface ProviderInfo {
 
 const getWalletProviders = (): readonly ProviderInfo[] => {
   return (
-    Object.entries(WALLET_PROVIDERS) as readonly [
-      WalletType,
-      WalletProviderInfo
-    ][]
-  )
-    .filter(([, p]) =>
-      typeof window !== "undefined" && isMobile ? p.isMobile : true
+    (
+      Object.entries(WALLET_PROVIDERS) as readonly [
+        WalletType,
+        WalletProviderInfo
+      ][]
     )
-    .slice()
-    .sort(([, a], [, b]) => {
-      if (typeof window !== "undefined") {
-        return (a.isInstalled?.() ?? true) === (b.isInstalled?.() ?? true)
-          ? a.name < b.name
+      .filter(([, p]) =>
+        typeof window !== "undefined" && isMobile ? p.isMobile : true
+      )
+      .slice()
+      .sort(([, a], [, b]) => {
+        if (typeof window !== "undefined") {
+          return (a.isInstalled?.() ?? true) === (b.isInstalled?.() ?? true)
+            ? a.name < b.name
+              ? -1
+              : 1
+            : a.isInstalled?.() ?? true
             ? -1
-            : 1
-          : a.isInstalled?.() ?? true
-          ? -1
-          : 1;
-      }
-      return a.name < b.name ? -1 : 1;
-    })
-    .map(
-      ([walletType, info]): ProviderInfo => ({
-        type: walletType,
-        info,
-        mustInstall: !!(
-          typeof window !== "undefined" &&
-          info.isInstalled &&
-          info.isInstalled()
-        ),
+            : 1;
+        }
+        return a.name < b.name ? -1 : 1;
       })
-    );
+      .map(
+        ([walletType, info]): ProviderInfo => ({
+          type: walletType,
+          info,
+          mustInstall: !!(
+            typeof window !== "undefined" &&
+            info.isInstalled &&
+            info.isInstalled()
+          ),
+        })
+      )
+      // no secret key for now
+      .filter((p) => p.type !== WalletType.SecretKey)
+  );
 };
 
 interface Props {
