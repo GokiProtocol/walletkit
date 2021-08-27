@@ -1,4 +1,5 @@
 import type { WalletProviderInfo } from "@saberhq/use-solana";
+import { useSolana } from "@saberhq/use-solana";
 import React, { useMemo, useState } from "react";
 
 import type { WalletKitArgs } from "../../types";
@@ -31,6 +32,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
   const [installProvider, setInstallProvider] =
     useState<WalletProviderInfo | null>(null);
 
+  const { disconnect } = useSolana();
   const [walletToConnect, setWalletToConnect] = useState<ProviderInfo | null>(
     null
   );
@@ -75,6 +77,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
       {step === ModalStep.Select && (
         <WalletStepSelect
           onSelect={(info) => {
+            disconnect();
             setWalletToConnect(info);
             setStep(ModalStep.Connecting);
           }}

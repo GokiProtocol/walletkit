@@ -1,6 +1,7 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useSolana } from "@saberhq/use-solana";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { BottomArea, FooterText } from "../ButtonWithFooter";
 import type { ProviderInfo } from "../WalletStepSelect";
@@ -26,27 +27,64 @@ export const WalletStepConnecting: React.FC<Props> = ({
     ) : (
       <walletProviderInfo.icon />
     );
-  const { activate } = useSolana();
+  const { activate, connected, wallet } = useSolana();
+  const [error, setError] = useState<string | null>(null);
+
+  const doActivate = useCallback(async () => {
+    try {
+      await activate(info.type);
+      setError(null);
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }, [activate, info.type]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      void (async () => {
-        await activate(info.type);
-        onComplete?.();
-      })();
+      void doActivate();
     }, 500);
     return () => clearTimeout(timeout);
-  }, [activate, info.type, onComplete]);
+  }, [doActivate]);
+
+  // close modal only when the wallet is connected
+  useEffect(() => {
+    if (wallet && connected) {
+      onComplete?.();
+    }
+  }, [wallet, connected, onComplete]);
 
   return (
     <Wrapper>
       <ConnectingWrapper>
-        <ConnectingHeader>
-          <Connecting>Connecting...</Connecting>
-          <ConnectingInstructions>
-            Please unlock your {walletProviderInfo.name} wallet.
-          </ConnectingInstructions>
-        </ConnectingHeader>
+        {error ? (
+          <ConnectingHeader>
+            <Connecting>Error connecting wallet</Connecting>
+            <ConnectingInstructions>{error}</ConnectingInstructions>
+            <ConnectingInstructions>
+              <a
+                css={css`
+                  color: #696969;
+                  font-weight: bold;
+                `}
+                href="#"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  void doActivate();
+                }}
+              >
+                Retry
+              </a>
+            </ConnectingInstructions>
+          </ConnectingHeader>
+        ) : (
+          <ConnectingHeader>
+            <Connecting>Connecting...</Connecting>
+            <ConnectingInstructions>
+              Please unlock your {walletProviderInfo.name} wallet.
+            </ConnectingInstructions>
+          </ConnectingHeader>
+        )}
         <AppIconsWrapper>
           <AppIcons>
             {icon}
