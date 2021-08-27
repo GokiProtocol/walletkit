@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "DOM"],
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "noEmit": true
+  },
+  "include": ["packages/"]
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "DOM"],
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "jsxImportSource": "@emotion/react",
+    "jsx": "react-jsx",
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist/"
+  },
+  "include": ["src/"]
+}
