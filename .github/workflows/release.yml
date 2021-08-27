@@ -25,6 +25,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: yarn install
       - run: yarn build
-      - run: yarn lerna publish --yes from-package
+      - run: yarn lerna publish --yes from-package --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
