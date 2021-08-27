@@ -21,7 +21,11 @@ function App() {
         >
           Learn React
         </a>
-        <WalletKitProvider>
+        <WalletKitProvider
+          app={{
+            name: "My App",
+          }}
+        >
           <ConnectWalletButton />
         </WalletKitProvider>
       </header>

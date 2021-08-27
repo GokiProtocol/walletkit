@@ -6,12 +6,15 @@ import React, { useMemo } from "react";
 interface Props {
   walletType: WalletType;
   info: WalletProviderInfo;
+
+  onInstall?: (info: WalletProviderInfo) => void;
   onDismiss?: () => void;
 }
 
 export const WalletProviderOption: React.FC<Props> = ({
   walletType,
   info,
+  onInstall,
   onDismiss,
 }: Props) => {
   const { activate } = useSolana();
@@ -36,7 +39,7 @@ export const WalletProviderOption: React.FC<Props> = ({
         e.preventDefault();
 
         if (mustInstall) {
-          window.open(info.url, "_blank", "noopener noreferrer");
+          onInstall?.(info);
           return;
         }
         await activate(walletType);

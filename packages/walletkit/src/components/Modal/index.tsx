@@ -17,6 +17,10 @@ export interface ModalProps {
   isOpen: boolean;
   onDismiss: () => void;
   darkenOverlay?: boolean;
+
+  hideBackButton?: boolean;
+  hideCloseButton?: boolean;
+  hideSolanaLogo?: boolean;
 }
 
 export const Modal: React.FC<ModalProps> = ({
@@ -24,6 +28,10 @@ export const Modal: React.FC<ModalProps> = ({
   isOpen,
   onDismiss,
   darkenOverlay = true,
+
+  hideBackButton = true,
+  hideCloseButton = false,
+  hideSolanaLogo = true,
 }: ModalProps) => {
   const fadeTransition = useTransition(isOpen, {
     config: { duration: 150 },
@@ -75,29 +83,41 @@ export const Modal: React.FC<ModalProps> = ({
                   : {})}
               >
                 <TopArea>
-                  <ButtonIcon
-                    href="#"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      onDismiss();
-                    }}
-                  >
-                    <BackIcon />
-                  </ButtonIcon>
-                  <LogoWrapper>
-                    <SolanaLogo />
-                  </LogoWrapper>
-                  <ButtonIcon
-                    href="#"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      onDismiss();
-                    }}
-                  >
-                    <CloseIcon />
-                  </ButtonIcon>
+                  {hideBackButton ? (
+                    <div />
+                  ) : (
+                    <ButtonIcon
+                      href="#"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        onDismiss();
+                      }}
+                    >
+                      <BackIcon />
+                    </ButtonIcon>
+                  )}
+                  {hideSolanaLogo ? (
+                    <div />
+                  ) : (
+                    <LogoWrapper>
+                      <SolanaLogo />
+                    </LogoWrapper>
+                  )}
+                  {hideCloseButton ? (
+                    <div />
+                  ) : (
+                    <ButtonIcon
+                      href="#"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        onDismiss();
+                      }}
+                    >
+                      <CloseIcon />
+                    </ButtonIcon>
+                  )}
                 </TopArea>
                 <Content>{children}</Content>
               </ModalWrapper>
@@ -149,6 +169,7 @@ const ModalWrapper = styled(animated(DialogContent))`
   }
   position: relative;
 
+  box-shadow: 0px 4px 16px rgba(207, 207, 207, 0.25);
   width: 100%;
   max-width: 360px;
   height: 608px;

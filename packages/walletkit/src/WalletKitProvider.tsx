@@ -2,6 +2,7 @@ import { SolanaProvider } from "@saberhq/use-solana";
 import React, { useContext, useMemo, useState } from "react";
 
 import { WalletSelectorModal } from "./components/WalletSelectorModal";
+import type { WalletKitArgs } from "./types";
 
 export interface WalletKit {
   connect: () => void;
@@ -9,11 +10,14 @@ export interface WalletKit {
 
 const WalletKitContext = React.createContext<WalletKit | null>(null);
 
-interface Props {
+interface Props extends WalletKitArgs {
   children: React.ReactNode;
 }
 
-export const WalletKitProvider: React.FC<Props> = ({ children }: Props) => {
+export const WalletKitProvider: React.FC<Props> = ({
+  children,
+  app,
+}: Props) => {
   const [showWalletSelector, setShowWalletSelector] = useState<boolean>(false);
 
   const kit = useMemo(() => {
@@ -24,6 +28,7 @@ export const WalletKitProvider: React.FC<Props> = ({ children }: Props) => {
     <SolanaProvider>
       <WalletKitContext.Provider value={kit}>
         <WalletSelectorModal
+          app={app}
           isOpen={showWalletSelector}
           onDismiss={() => setShowWalletSelector(false)}
         />
