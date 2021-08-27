@@ -44,6 +44,7 @@ const Title = styled.span`
 `;
 
 const Description = styled.p`
+  margin: 0;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.02em;

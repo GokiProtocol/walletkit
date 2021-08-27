@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 import { ButtonWithFooter } from "../ButtonWithFooter";
 
@@ -19,6 +19,14 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
 
   const icon =
     typeof info.icon === "string" ? <img src={info.icon} /> : <info.icon />;
+
+  // autoredirect after 1 second
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      window.open(info.url, "_blank", "noopener noreferrer");
+    }, 1_000);
+    return () => clearTimeout(timeout);
+  });
 
   return (
     <Wrapper>
