@@ -22,7 +22,7 @@ export const ButtonWithFooter: React.FC<Props> = ({
   );
 };
 
-const BottomArea = styled.div`
+export const BottomArea = styled.div`
   position: absolute;
   left: 28px;
   right: 28px;
@@ -34,7 +34,7 @@ const BottomArea = styled.div`
   gap: 18px;
 `;
 
-const FooterText = styled.div`
+export const FooterText = styled.div`
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.02em;

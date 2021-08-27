@@ -4,9 +4,11 @@ import React, { useMemo, useState } from "react";
 import type { WalletKitArgs } from "../../types";
 import type { ModalProps } from "../Modal";
 import { Modal } from "../Modal";
+import { WalletStepConnecting } from "./WalletStepConnecting";
 import { WalletStepIntro } from "./WalletStepIntro";
 import { DefaultAppIcon } from "./WalletStepIntro/DefaultAppIcon";
 import { WalletStepRedirect } from "./WalletStepRedirect";
+import type { ProviderInfo } from "./WalletStepSelect";
 import { WalletStepSelect } from "./WalletStepSelect";
 
 type Props = Omit<ModalProps, "children"> & WalletKitArgs;
@@ -15,6 +17,7 @@ enum ModalStep {
   Intro = "intro",
   Select = "select",
   Redirect = "redirect",
+  Connecting = "connecting",
 }
 
 export const WalletSelectorModal: React.FC<Props> = ({
@@ -28,14 +31,21 @@ export const WalletSelectorModal: React.FC<Props> = ({
   const [installProvider, setInstallProvider] =
     useState<WalletProviderInfo | null>(null);
 
+  const [walletToConnect, setWalletToConnect] = useState<ProviderInfo | null>(
+    null
+  );
+
+  const onDismiss = () => {
+    modalProps.onDismiss();
+    setInstallProvider(null);
+    setWalletToConnect(null);
+    setStep(ModalStep.Intro);
+  };
+
   return (
     <Modal
       {...modalProps}
-      onDismiss={() => {
-        modalProps.onDismiss();
-        setStep(ModalStep.Intro);
-        setInstallProvider(null);
-      }}
+      onDismiss={onDismiss}
       onBack={
         step === ModalStep.Intro
           ? undefined
@@ -45,6 +55,9 @@ export const WalletSelectorModal: React.FC<Props> = ({
                   setStep(ModalStep.Intro);
                   break;
                 case ModalStep.Redirect:
+                  setStep(ModalStep.Select);
+                  break;
+                case ModalStep.Connecting:
                   setStep(ModalStep.Select);
                   break;
               }
@@ -61,6 +74,10 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.Select && (
         <WalletStepSelect
+          onSelect={(info) => {
+            setWalletToConnect(info);
+            setStep(ModalStep.Connecting);
+          }}
           onInstall={(info) => {
             setInstallProvider(info);
             setStep(ModalStep.Redirect);
@@ -69,6 +86,16 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.Redirect && installProvider && (
         <WalletStepRedirect info={installProvider} />
+      )}
+      {step === ModalStep.Connecting && walletToConnect && (
+        <WalletStepConnecting
+          appIcon={appIcon}
+          info={walletToConnect}
+          onBack={() => {
+            setStep(ModalStep.Select);
+          }}
+          onComplete={onDismiss}
+        />
       )}
     </Modal>
   );

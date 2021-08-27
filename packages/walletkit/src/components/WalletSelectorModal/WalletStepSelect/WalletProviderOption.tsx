@@ -1,23 +1,19 @@
 import styled from "@emotion/styled";
-import type { WalletProviderInfo, WalletType } from "@saberhq/use-solana";
-import { useSolana } from "@saberhq/use-solana";
+import type { WalletProviderInfo } from "@saberhq/use-solana";
 import React, { useMemo } from "react";
 
 interface Props {
-  walletType: WalletType;
   info: WalletProviderInfo;
 
   onInstall?: (info: WalletProviderInfo) => void;
-  onDismiss?: () => void;
+  onSelect?: () => void;
 }
 
 export const WalletProviderOption: React.FC<Props> = ({
-  walletType,
   info,
   onInstall,
-  onDismiss,
+  onSelect,
 }: Props) => {
-  const { activate } = useSolana();
   const mustInstall =
     typeof window !== "undefined" && info.isInstalled?.() === false;
   const icon =
@@ -34,7 +30,7 @@ export const WalletProviderOption: React.FC<Props> = ({
   return (
     <Wrapper
       role="button"
-      onClick={async (e) => {
+      onClick={(e) => {
         e.stopPropagation();
         e.preventDefault();
 
@@ -42,8 +38,7 @@ export const WalletProviderOption: React.FC<Props> = ({
           onInstall?.(info);
           return;
         }
-        await activate(walletType);
-        onDismiss?.();
+        onSelect?.();
       }}
     >
       <InfoTileWrapper className="wallet-info-tile">

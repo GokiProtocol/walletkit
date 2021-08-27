@@ -6,7 +6,7 @@ import { isMobile } from "react-device-detect";
 
 import { WalletProviderOption } from "./WalletProviderOption";
 
-interface ProviderInfo {
+export interface ProviderInfo {
   type: WalletType;
   info: WalletProviderInfo;
   mustInstall: boolean;
@@ -49,12 +49,12 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
 };
 
 interface Props {
+  onSelect?: (info: ProviderInfo) => void;
   onInstall?: (info: WalletProviderInfo) => void;
-  onDismiss?: () => void;
 }
 
 export const WalletStepSelect: React.FC<Props> = ({
-  onDismiss,
+  onSelect,
   onInstall,
 }: Props) => {
   const [showUninstalled, setShowUninstalled] = useState<boolean>(false);
@@ -81,13 +81,15 @@ export const WalletStepSelect: React.FC<Props> = ({
                 ? true
                 : prov.mustInstall || !prov.info.isInstalled
             )
-            .map(({ type: walletType, info: provider }) => {
+            .map((fullInfo) => {
+              const { info: provider } = fullInfo;
               return (
                 <WalletProviderOption
                   key={provider.url}
-                  walletType={walletType}
                   info={provider}
-                  onDismiss={onDismiss}
+                  onSelect={() => {
+                    onSelect?.(fullInfo);
+                  }}
                   onInstall={onInstall}
                 />
               );
