@@ -1,12 +1,12 @@
 "use strict";
 
 module.exports = {
+  extends: ["@saberhq/eslint-config-react"],
   env: {
     browser: true,
     es2021: true,
   },
   ignorePatterns: ["*.js"],
-  extends: ["@saberhq/eslint-config-react"],
   parserOptions: {
     project: "tsconfig.json",
   },

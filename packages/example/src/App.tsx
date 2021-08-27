@@ -1,9 +1,10 @@
 import "./App.css";
+
+import { css } from "@emotion/react";
 import {
   ConnectWalletButton,
   WalletKitProvider,
 } from "@gokiprotocol/walletkit";
-import { css } from "@emotion/react";
 
 export const BREAKPOINT_SIZES = [576, 780, 992, 1200] as const;
 
@@ -17,7 +18,7 @@ export const breakpoints = {
   medium: maxMediaQueries[2],
 };
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -58,6 +59,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
