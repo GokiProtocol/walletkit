@@ -88,7 +88,7 @@ const ProviderDesc = styled.div`
 `;
 
 const ProviderName = styled.span`
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.02em;
