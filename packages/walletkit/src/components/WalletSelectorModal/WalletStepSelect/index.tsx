@@ -55,6 +55,7 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
       info: {
         ...WALLET_PROVIDERS.Ledger,
         name: "Ledger (advanced)",
+        url: "https://ledger.com",
       },
       mustInstall: false,
     },
