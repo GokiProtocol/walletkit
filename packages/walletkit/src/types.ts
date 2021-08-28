@@ -5,4 +5,5 @@ export interface WalletKitArgs {
     name: string;
     icon?: React.ReactNode;
   };
+  onError?: (err: Error) => void;
 }

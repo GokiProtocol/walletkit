@@ -9,6 +9,7 @@ import { Modal } from "../Modal";
 import { WalletStepConnecting } from "./WalletStepConnecting";
 import { WalletStepIntro } from "./WalletStepIntro";
 import { DefaultAppIcon } from "./WalletStepIntro/DefaultAppIcon";
+import { WalletStepLedgerAdvanced } from "./WalletStepLedgerAdvanced";
 import { WalletStepRedirect } from "./WalletStepRedirect";
 import type { ProviderInfo } from "./WalletStepSelect";
 import { WalletStepSelect } from "./WalletStepSelect";
@@ -20,10 +21,12 @@ enum ModalStep {
   Select = "select",
   Redirect = "redirect",
   Connecting = "connecting",
+  LedgerAdvanced = "ledger-advanced",
 }
 
 export const WalletSelectorModal: React.FC<Props> = ({
   app,
+  onError,
   ...modalProps
 }: Props) => {
   const appIcon = useMemo(() => app.icon ?? <DefaultAppIcon />, [app.icon]);
@@ -67,6 +70,9 @@ export const WalletSelectorModal: React.FC<Props> = ({
                 case ModalStep.Connecting:
                   setStep(ModalStep.Select);
                   break;
+                case ModalStep.LedgerAdvanced:
+                  setStep(ModalStep.Select);
+                  break;
               }
             }
       }
@@ -83,6 +89,15 @@ export const WalletSelectorModal: React.FC<Props> = ({
         <WalletStepSelect
           onSelect={(info) => {
             disconnect();
+
+            if (
+              info.type === WalletType.Ledger &&
+              info.info.name === "Ledger (advanced)"
+            ) {
+              setStep(ModalStep.LedgerAdvanced);
+              return;
+            }
+
             setWalletToConnect(info);
             setStep(ModalStep.Connecting);
 
@@ -111,6 +126,15 @@ export const WalletSelectorModal: React.FC<Props> = ({
             setStep(ModalStep.Select);
           }}
           onComplete={onDismiss}
+        />
+      )}
+      {step === ModalStep.LedgerAdvanced && (
+        <WalletStepLedgerAdvanced
+          onBack={() => {
+            setStep(ModalStep.Select);
+          }}
+          onError={onError}
+          onSuccess={onDismiss}
         />
       )}
     </Modal>
