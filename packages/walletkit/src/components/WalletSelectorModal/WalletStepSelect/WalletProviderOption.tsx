@@ -21,7 +21,11 @@ export const WalletProviderOption: React.FC<Props> = ({
 
   const providerURL = useMemo(() => {
     try {
-      return new URL(info.url).hostname;
+      const name = new URL(info.url).hostname;
+      if (name.startsWith("www.")) {
+        return name.slice(4);
+      }
+      return name;
     } catch (e) {
       return info.url;
     }
