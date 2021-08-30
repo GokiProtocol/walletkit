@@ -2712,9 +2712,9 @@
     tslib "^2.3.0"
 
 "@saberhq/use-solana@^0.14.2":
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-0.14.2.tgz#a5fd650693ff54638fd344638795d1a533c9afd8"
-  integrity sha512-wjJ1EUHO7cv01ZAk3ihUFamDsWhqQqgcV5HTWuHMypN2HX96lu1Lw8y/Nyj72cuIMSq0Nzfz7A/fmLUFOPhFrQ==
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-0.14.3.tgz#c0d7e4c0bed402413790502b2adf5c78adcfe0de"
+  integrity sha512-n+K41NwgybNNzrOMKRoqa1iY4a/yEs5jFPvrjhiJLvBt7INoDVodbNmgWDonDTXSanZf/+mkO4Rq7k+zR/6b5w==
   dependencies:
     "@ledgerhq/hw-transport" "^6.0.2"
     "@ledgerhq/hw-transport-webusb" "^6.0.2"
