@@ -2698,13 +2698,13 @@
     tslib "^2.3.0"
 
 "@saberhq/token-utils@^0.14.2":
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/@saberhq/token-utils/-/token-utils-0.14.2.tgz#c096af908897ffc1516c2ec1ea2e9eff690667d6"
-  integrity sha512-ERLZaX27W/OZrgFPRr5aQ4+Pi2VwRHaWeeRQE1qleSgs/jYgm4NgWYhSPQH3UEP1/qDF+bKnjebCv9s2NcXHwA==
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/@saberhq/token-utils/-/token-utils-0.14.5.tgz#ae7bff077cc8829c4afcd433f9fb999c666f2401"
+  integrity sha512-4hEwsdgsk7lsemyDE7BZx0Q+ZW+d9HFi43Cya8goJZaaq1hbMmadTtuCdYLILeRACfUfQGPDtkTZ7zSHNYg8Sw==
   dependencies:
     "@saberhq/solana-contrib" "^0.14.2"
     "@solana/spl-token" "^0.1.5"
-    "@solana/spl-token-registry" "^0.2.210"
+    "@solana/spl-token-registry" "^0.2.223"
     "@solana/web3.js" "^1.23.0"
     "@ubeswap/token-math" "^4.1.0"
     buffer-layout "^1.2.2"
@@ -2749,10 +2749,10 @@
   dependencies:
     buffer "~6.0.3"
 
-"@solana/spl-token-registry@^0.2.210":
-  version "0.2.223"
-  resolved "https://registry.yarnpkg.com/@solana/spl-token-registry/-/spl-token-registry-0.2.223.tgz#6834eafee6afb7ac5f451dd55e923ae8b131a3bb"
-  integrity sha512-/LPab2pHncYR4AGwz0UOrz5P1G17LkrQSqOyq02n75P6NanqIPieQu/36iPgo+2elWmWEeDlWQky06/MF2O+lw==
+"@solana/spl-token-registry@^0.2.223":
+  version "0.2.226"
+  resolved "https://registry.yarnpkg.com/@solana/spl-token-registry/-/spl-token-registry-0.2.226.tgz#e080801c7644c92d6e37653bc31ba33ca25dae85"
+  integrity sha512-QPLYfw7Dob4WKC9tGmdgi/zihlRgiH4S2LUzSrIDJXhx2KfNVmkOIqgCutKAJPsqEdDUZ4sQ0YQ4RbBWkWmwUw==
   dependencies:
     cross-fetch "3.0.6"
 
