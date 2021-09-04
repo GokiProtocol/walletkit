@@ -45,7 +45,7 @@ export const WalletStepIntro: React.FC<Props> = ({
           <>
             First time using Solana?{" "}
             <a
-              href="https://solana.com"
+              href="https://learn.goki.so"
               target="_blank"
               rel="noreferrer noopener"
             >
