@@ -21,7 +21,7 @@
     "url": "https://github.com/GokiProtocol/walletkit/issues"
   },
   "devDependencies": {
-    "@saberhq/use-solana": "^0.14.2",
+    "@saberhq/use-solana": "^0.16.0",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
