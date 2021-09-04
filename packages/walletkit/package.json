@@ -1,7 +1,7 @@
 {
   "name": "@gokiprotocol/walletkit",
   "version": "0.2.6",
-  "description": "> TODO: description",
+  "description": "Wallet connector modal for Solana dApps.",
   "author": "Goki Rajesh <goki@goki.so>",
   "homepage": "https://github.com/GokiProtocol/walletkit#readme",
   "license": "GPL-3.0",

@@ -1,11 +1,3 @@
-# `walletkit`
+# `@gokiprotocol/walletkit`
 
-> TODO: description
-
-## Usage
-
-```
-const walletkit = require('walletkit');
-
-// TODO: DEMONSTRATE API
-```
+WalletKit is a React library that allows a Solana dApp to display a modal for connecting wallets.
