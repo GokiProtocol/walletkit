@@ -2697,14 +2697,26 @@
     tiny-invariant "^1.1.0"
     tslib "^2.3.0"
 
-"@saberhq/token-utils@^0.14.2":
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/@saberhq/token-utils/-/token-utils-0.14.2.tgz#c096af908897ffc1516c2ec1ea2e9eff690667d6"
-  integrity sha512-ERLZaX27W/OZrgFPRr5aQ4+Pi2VwRHaWeeRQE1qleSgs/jYgm4NgWYhSPQH3UEP1/qDF+bKnjebCv9s2NcXHwA==
+"@saberhq/solana-contrib@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-0.16.0.tgz#0e66e92db17b4f5c74a4a1f2565cbbd6ab878846"
+  integrity sha512-PHN5ObKJVD/nj1L2YLuB1gAYCDoyRzVBoT3xS8osy4Pfor5+AG0fHsHHErK+czkLzf0ddIToRuyQQjc6kttoYA==
   dependencies:
-    "@saberhq/solana-contrib" "^0.14.2"
+    "@solana/web3.js" "^1.23.0"
+    "@types/promise-retry" "^1.1.3"
+    "@types/retry" "^0.12.1"
+    promise-retry "^2.0.1"
+    tiny-invariant "^1.1.0"
+    tslib "^2.3.0"
+
+"@saberhq/token-utils@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@saberhq/token-utils/-/token-utils-0.16.0.tgz#d6557505a6b6ebf9954bb90d316a5c9ba01e4e9e"
+  integrity sha512-nUMlJ+1Dds69O7fRtkTyvlw2+lsn8En16II3oSCjgybyQDGzHD/rDHuezb1F8ss+3J4cpqvbwZHaHoDfRd6arA==
+  dependencies:
+    "@saberhq/solana-contrib" "^0.16.0"
     "@solana/spl-token" "^0.1.5"
-    "@solana/spl-token-registry" "^0.2.210"
+    "@solana/spl-token-registry" "^0.2.226"
     "@solana/web3.js" "^1.23.0"
     "@ubeswap/token-math" "^4.1.0"
     buffer-layout "^1.2.2"
@@ -2720,6 +2732,23 @@
     "@ledgerhq/hw-transport-webusb" "^6.0.2"
     "@project-serum/sol-wallet-adapter" "^0.2.0"
     "@saberhq/solana-contrib" "^0.14.2"
+    "@solana/web3.js" "^1.23.0"
+    "@types/bs58" "^4.0.1"
+    bs58 "^4.0.1"
+    eventemitter3 "^4.0.7"
+    fast-json-stable-stringify "^2.1.0"
+    tslib "^2.3.0"
+    unstated-next "^1.1.0"
+
+"@saberhq/use-solana@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-0.16.0.tgz#a1ea00815730979a03423ea5e94a0bb8ebd202e3"
+  integrity sha512-B1GrNOhtNqvGkc/7BSJuC/chLJeXRltyIFpHtzcEX8zq9LBbQJx3ER3ZJYht05g0NyI9byA4Ws+uXc30mvO3/w==
+  dependencies:
+    "@ledgerhq/hw-transport" "^6.0.2"
+    "@ledgerhq/hw-transport-webusb" "^6.0.2"
+    "@project-serum/sol-wallet-adapter" "^0.2.0"
+    "@saberhq/solana-contrib" "^0.16.0"
     "@solana/web3.js" "^1.23.0"
     "@types/bs58" "^4.0.1"
     bs58 "^4.0.1"
@@ -2749,10 +2778,10 @@
   dependencies:
     buffer "~6.0.3"
 
-"@solana/spl-token-registry@^0.2.210":
-  version "0.2.223"
-  resolved "https://registry.yarnpkg.com/@solana/spl-token-registry/-/spl-token-registry-0.2.223.tgz#6834eafee6afb7ac5f451dd55e923ae8b131a3bb"
-  integrity sha512-/LPab2pHncYR4AGwz0UOrz5P1G17LkrQSqOyq02n75P6NanqIPieQu/36iPgo+2elWmWEeDlWQky06/MF2O+lw==
+"@solana/spl-token-registry@^0.2.226":
+  version "0.2.229"
+  resolved "https://registry.yarnpkg.com/@solana/spl-token-registry/-/spl-token-registry-0.2.229.tgz#4e2fc956fcb72340e9ac1d50f6f7793c8f2f0cba"
+  integrity sha512-Y+R9sJPsa6mTSTzTqAeHs6TtYRh/8hhOuVtQikxKNyUYLCagm8Ygni/PcpBl6KvVBlDv9qXzpbum096uAkXhMg==
   dependencies:
     cross-fetch "3.0.6"
 
