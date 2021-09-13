@@ -18,6 +18,7 @@ interface Props extends WalletKitArgs, UseSolanaArgs {
 export const WalletKitProvider: React.FC<Props> = ({
   children,
   app,
+  ...solanaProviderArgs
 }: Props) => {
   const [showWalletSelector, setShowWalletSelector] = useState<boolean>(false);
 
@@ -26,7 +27,7 @@ export const WalletKitProvider: React.FC<Props> = ({
   }, []);
 
   return (
-    <SolanaProvider>
+    <SolanaProvider {...solanaProviderArgs}>
       <WalletKitContext.Provider value={kit}>
         <WalletSelectorModal
           app={app}
