@@ -1,13 +1,13 @@
 {
   "name": "example",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "private": true,
   "license": "GPL-3.0",
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@gokiprotocol/walletkit": "^0.2.7",
+    "@gokiprotocol/walletkit": "^0.2.8",
     "@saberhq/solana-contrib": "^0.18.0",
     "@saberhq/token-utils": "^0.18.0",
     "@saberhq/use-solana": "^0.18.0",
