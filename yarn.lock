@@ -2697,6 +2697,18 @@
     tiny-invariant "^1.1.0"
     tslib "^2.3.0"
 
+"@saberhq/solana-contrib@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-0.18.0.tgz#8a8552f4b1c9cb167add25494fdb2c476c8376a6"
+  integrity sha512-zVW5alyx0ARYC0q24KW8LEaaRCUcuOaOiTTo/lCWXT3/Ng31fdXfVpKWNMuLAm1Ofpw5z/cVdVZZk9ryG9JB0w==
+  dependencies:
+    "@solana/web3.js" "^1.25.0"
+    "@types/promise-retry" "^1.1.3"
+    "@types/retry" "^0.12.1"
+    promise-retry "^2.0.1"
+    tiny-invariant "^1.1.0"
+    tslib "^2.3.0"
+
 "@saberhq/token-utils@^0.14.2":
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/@saberhq/token-utils/-/token-utils-0.14.2.tgz#c096af908897ffc1516c2ec1ea2e9eff690667d6"
@@ -2768,10 +2780,10 @@
     buffer-layout "^1.2.0"
     dotenv "10.0.0"
 
-"@solana/web3.js@^1.21.0", "@solana/web3.js@^1.23.0", "@solana/web3.js@^1.24.1":
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.24.1.tgz#1fb29f344454669183206f452ab3b8792567cade"
-  integrity sha512-XImMWAvjcXteMQwe1FFjoe6u72xmcu+UYobPIxLEMX29XXWVTalyYRKBXvcOXwz6DliTYnFXmncNEwUDEFFHGg==
+"@solana/web3.js@^1.21.0", "@solana/web3.js@^1.23.0", "@solana/web3.js@^1.24.1", "@solana/web3.js@^1.25.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.26.0.tgz#bdd71616ce0ff40258dfe3a8d3a401ed5658fbae"
+  integrity sha512-XXrE8srfA3ilMvpOs6WdGOIuY8epc0sF9Tl4M6BHNnfS5pbSQ+jJJdEhwi6AzURgXWWu//242Tq347iLSQhRqQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@solana/buffer-layout" "^3.0.0"
@@ -2779,10 +2791,10 @@
     borsh "^0.4.0"
     bs58 "^4.0.1"
     buffer "6.0.1"
+    cross-fetch "^3.1.4"
     crypto-hash "^1.2.2"
     jayson "^3.4.4"
     js-sha3 "^0.8.0"
-    node-fetch "^2.6.1"
     rpc-websockets "^7.4.2"
     secp256k1 "^4.0.2"
     superstruct "^0.14.2"
@@ -5297,6 +5309,13 @@ cross-fetch@3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
+  dependencies:
+    node-fetch "2.6.1"
+
+cross-fetch@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
   dependencies:
     node-fetch "2.6.1"
 
