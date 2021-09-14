@@ -7,7 +7,7 @@
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
-    "@saberhq/eslint-config-react": "^0.18.0",
+    "@saberhq/eslint-config-react": "^1.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-unused-imports": "^1.1.4",
     "lerna": "^4.0.0",
