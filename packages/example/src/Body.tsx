@@ -84,11 +84,14 @@ export const Body: React.FC = () => {
               disabled={!providerMut}
               onClick={async () => {
                 invariant(providerMut, "providerMut");
-                const txSig = await providerMut.sendConnection.requestAirdrop(
+                const txSig = await providerMut.connection.requestAirdrop(
                   providerMut.wallet.publicKey,
                   LAMPORTS_PER_SOL
                 );
-                await new PendingTransaction(providerMut, txSig).wait();
+                await new PendingTransaction(
+                  providerMut.connection,
+                  txSig
+                ).wait();
                 await refetchSOL();
               }}
             >
