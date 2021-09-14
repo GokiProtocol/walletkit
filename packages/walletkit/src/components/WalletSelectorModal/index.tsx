@@ -16,7 +16,7 @@ import { WalletStepSelect } from "./WalletStepSelect";
 
 type Props = Omit<ModalProps, "children"> & WalletKitArgs;
 
-enum ModalStep {
+export enum ModalStep {
   Intro = "intro",
   Select = "select",
   Redirect = "redirect",
@@ -27,11 +27,12 @@ enum ModalStep {
 export const WalletSelectorModal: React.FC<Props> = ({
   app,
   onError,
+  initialStep = ModalStep.Intro,
   ...modalProps
 }: Props) => {
   const appIcon = useMemo(() => app.icon ?? <DefaultAppIcon />, [app.icon]);
 
-  const [step, setStep] = useState<ModalStep>(ModalStep.Intro);
+  const [step, setStep] = useState<ModalStep>(initialStep);
 
   const [installProvider, setInstallProvider] =
     useState<WalletProviderInfo | null>(null);
