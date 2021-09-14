@@ -4,7 +4,14 @@ import lighten from "polished/lib/color/lighten";
 
 import { useWalletKit } from "../../WalletKitProvider";
 
-interface Props {
+interface Props
+  extends Omit<
+    React.DetailedHTMLProps<
+      React.ButtonHTMLAttributes<HTMLButtonElement>,
+      HTMLButtonElement
+    >,
+    "onClick"
+  > {
   variant?: "primary" | "secondary";
 }
 
@@ -46,10 +53,11 @@ const Logomark: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const ConnectWalletButton: React.FC<Props> = ({
   variant = "primary",
+  ...buttonProps
 }: Props) => {
   const { connect } = useWalletKit();
   return (
-    <Button variant={variant} onClick={connect}>
+    <Button variant={variant} {...buttonProps} onClick={connect}>
       <Logomark
         css={css`
           height: 13px;
