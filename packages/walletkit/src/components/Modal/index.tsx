@@ -187,7 +187,11 @@ const ModalWrapper = styled(animated(DialogContent))`
   color: #696969;
 `;
 
-const StyledDialogOverlay = styled(animated(DialogOverlay))<{
+const StyledDialogOverlay = styled(animated(DialogOverlay), {
+  shouldForwardProp(prop) {
+    return prop !== "darkenOverlay";
+  },
+})<{
   darkenOverlay: boolean;
 }>`
   [data-reach-dialog-content] {
