@@ -17,7 +17,7 @@ const Logomark: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clipPath="url(#solana_logomark_clip)">
+    <g clipPath="url(#solana_logomark_clip_goki)">
       <path
         d="M2.59829 10.4132C2.69612 10.3119 2.82875 10.255 2.96704 10.255H15.7267C15.9592 10.255 16.0756 10.5463 15.9111 10.7166L13.3898 13.3277C13.292 13.4291 13.1594 13.486 13.0211 13.486H0.261373C0.0289306 13.486 -0.0874295 13.1947 0.0769974 13.0244L2.59829 10.4132Z"
         fill="currentcolor"
@@ -32,7 +32,7 @@ const Logomark: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
       />
     </g>
     <defs>
-      <clipPath id="solana_logomark_clip">
+      <clipPath id="solana_logomark_clip_goki">
         <rect
           width="16"
           height="13"
