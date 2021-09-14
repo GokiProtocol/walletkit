@@ -2,7 +2,10 @@ import type { UseSolanaArgs } from "@saberhq/use-solana";
 import { SolanaProvider } from "@saberhq/use-solana";
 import React, { useContext, useMemo, useState } from "react";
 
-import { WalletSelectorModal } from "./components/WalletSelectorModal";
+import {
+  ModalStep,
+  WalletSelectorModal,
+} from "./components/WalletSelectorModal";
 import type { WalletKitArgs } from "./types";
 
 export interface WalletKit {
@@ -18,6 +21,7 @@ interface Props extends WalletKitArgs, UseSolanaArgs {
 export const WalletKitProvider: React.FC<Props> = ({
   children,
   app,
+  initialStep = ModalStep.Intro,
   ...solanaProviderArgs
 }: Props) => {
   const [showWalletSelector, setShowWalletSelector] = useState<boolean>(false);
@@ -31,6 +35,7 @@ export const WalletKitProvider: React.FC<Props> = ({
       <WalletKitContext.Provider value={kit}>
         <WalletSelectorModal
           app={app}
+          initialStep={initialStep}
           isOpen={showWalletSelector}
           onDismiss={() => setShowWalletSelector(false)}
         />
