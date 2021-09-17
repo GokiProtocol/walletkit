@@ -1599,10 +1599,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@ledgerhq/devices@^6.3.0":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-6.3.0.tgz#7ee59614198882311d1805912e368451527d05b2"
-  integrity sha512-DmVxqMAf3FhkpKjkbBCFVJ5DmesfplujeCLzFwO/zF5VGuwY7xxPqeSxlpusXJkqhEq+DbFzIDRWJYDf7rtXqg==
+"@ledgerhq/devices@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-6.7.0.tgz#90e8fef16e6d039dec64e8a7f1874031578e1973"
+  integrity sha512-FWJfmdl8V300++OXLgBLpIi+IJoR/srWvxpXrWkc9hd3cNMxgeCl9opm84Y0oJDLBQL9AaERMrb+Cb1nZZR9Tw==
   dependencies:
     "@ledgerhq/errors" "^6.2.0"
     "@ledgerhq/logs" "^6.2.0"
@@ -1614,22 +1614,22 @@
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-6.2.0.tgz#7dc2b3bf6bdedccdaa1b97dccacfa912c4fc22f8"
   integrity sha512-eO03x8HJmG60WtlrMuahigW/rwywFdcGzCnihta/MjkM8BD9A660cKVkyIuheCcpaB7UV/r+QsRl9abHbjjaag==
 
-"@ledgerhq/hw-transport-webusb@^6.6.0":
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-6.6.0.tgz#9be0d9f32ccee27f754bc50b35d9a703ebcc4d36"
-  integrity sha512-ovY2IzbmAFsVgym7ftLU4c36Me5DHuM41rdI7XipMRd1COvnYNiutqAMym2RLk5IS2LRPAqTWiWgt86Oy6DGvQ==
+"@ledgerhq/hw-transport-webusb@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-6.7.0.tgz#2d7fab52280c703ac66b0970ca636e8ba358d0af"
+  integrity sha512-IyUOAkXd2g5YG/DaRUer/7hZQnecxJDZK2MKFwpafpUbyJQNdkW09CcodinB3e/Y+pjk6O0XuGzUKLgk3dc2vQ==
   dependencies:
-    "@ledgerhq/devices" "^6.3.0"
+    "@ledgerhq/devices" "^6.7.0"
     "@ledgerhq/errors" "^6.2.0"
-    "@ledgerhq/hw-transport" "^6.3.0"
+    "@ledgerhq/hw-transport" "^6.7.0"
     "@ledgerhq/logs" "^6.2.0"
 
-"@ledgerhq/hw-transport@^6.0.2", "@ledgerhq/hw-transport@^6.3.0":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-6.3.0.tgz#4fc966b1a68c991c0a6b5384841f99c4f8304ce9"
-  integrity sha512-kdnVrgmxrFtKaRdkoaQBEa02RXgLzEBiooYbxA65BGSJig3PGWDS9LrqNpzLTZM1RQlivd9NLBmfwU2ze4chWA==
+"@ledgerhq/hw-transport@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-6.7.0.tgz#d1f0d70e21b91e6457a32d4c3cec0764e97461ff"
+  integrity sha512-w+PhW6Y4KXYdoCykkE1zt0VL6Ryf72RP8sZP8OH1O90hX/R/q9BMYKl8VNqTbqlrOrORgATlKkbmIJBjbngZew==
   dependencies:
-    "@ledgerhq/devices" "^6.3.0"
+    "@ledgerhq/devices" "^6.7.0"
     "@ledgerhq/errors" "^6.2.0"
     events "^3.3.0"
 
@@ -2685,12 +2685,12 @@
     eslint-plugin-unused-imports "^1.1.2"
     prettier "^2.3.2"
 
-"@saberhq/solana-contrib@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-1.0.0.tgz#f79c3776a5298bc6a26ef7a09f14115d3108b563"
-  integrity sha512-5PcY97k0PEIRwBiPA7jyW1WpEfvGwEaRbZqAxEO4HTB5X0XjQObB2QjghjM+BSDwNFmfrjJ+S2whLSvxw2FyRw==
+"@saberhq/solana-contrib@^1.0.0", "@saberhq/solana-contrib@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-1.2.0.tgz#94a8d3784b24d140fb254ba83d22a96bded66001"
+  integrity sha512-swzyDBxW1f7iMYkwqXrRHBjTkq77BxD67kYS0OWYSn5I2yRRJ9+I+UcKxDnKMM1crcXYltTaoVD5ex2YRh7eJg==
   dependencies:
-    "@solana/web3.js" "^1.25.0"
+    "@solana/web3.js" "^1.27.0"
     "@types/promise-retry" "^1.1.3"
     "@types/retry" "^0.12.1"
     promise-retry "^2.0.1"
@@ -2712,15 +2712,15 @@
     tslib "^2.3.0"
 
 "@saberhq/use-solana@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-1.0.0.tgz#1a9a76b655e082d51049b3a06155292496142892"
-  integrity sha512-bwufPvTHFG+OWPpiQIUhnOZvY1BmQDKLPxiQ1kfi85IabRQVlKJ8GcRlCbsAcVwSlR8AVk6+8sPTAP6OZk5+rA==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-1.2.1.tgz#e59803cd04b3d30c212f433536be37a893976aa6"
+  integrity sha512-DLlN4khKsxL2R6gfevxBt51A4u9qNADJRP1IZAV4NA4VFPbFczcnTtLQRBB2SagvQHXUucb9naeDiNYXV8TwIQ==
   dependencies:
-    "@ledgerhq/hw-transport" "^6.0.2"
-    "@ledgerhq/hw-transport-webusb" "^6.6.0"
+    "@ledgerhq/hw-transport" "^6.7.0"
+    "@ledgerhq/hw-transport-webusb" "^6.7.0"
     "@project-serum/sol-wallet-adapter" "^0.2.0"
-    "@saberhq/solana-contrib" "^1.0.0"
-    "@solana/web3.js" "^1.25.0"
+    "@saberhq/solana-contrib" "^1.2.0"
+    "@solana/web3.js" "^1.27.0"
     "@types/bs58" "^4.0.1"
     bs58 "^4.0.1"
     eventemitter3 "^4.0.7"
@@ -2769,30 +2769,10 @@
     buffer-layout "^1.2.0"
     dotenv "10.0.0"
 
-"@solana/web3.js@^1.21.0":
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.24.1.tgz#1fb29f344454669183206f452ab3b8792567cade"
-  integrity sha512-XImMWAvjcXteMQwe1FFjoe6u72xmcu+UYobPIxLEMX29XXWVTalyYRKBXvcOXwz6DliTYnFXmncNEwUDEFFHGg==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    "@solana/buffer-layout" "^3.0.0"
-    bn.js "^5.0.0"
-    borsh "^0.4.0"
-    bs58 "^4.0.1"
-    buffer "6.0.1"
-    crypto-hash "^1.2.2"
-    jayson "^3.4.4"
-    js-sha3 "^0.8.0"
-    node-fetch "^2.6.1"
-    rpc-websockets "^7.4.2"
-    secp256k1 "^4.0.2"
-    superstruct "^0.14.2"
-    tweetnacl "^1.0.0"
-
-"@solana/web3.js@^1.25.0", "@solana/web3.js@^1.26.0":
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.26.0.tgz#bdd71616ce0ff40258dfe3a8d3a401ed5658fbae"
-  integrity sha512-XXrE8srfA3ilMvpOs6WdGOIuY8epc0sF9Tl4M6BHNnfS5pbSQ+jJJdEhwi6AzURgXWWu//242Tq347iLSQhRqQ==
+"@solana/web3.js@^1.21.0", "@solana/web3.js@^1.25.0", "@solana/web3.js@^1.26.0", "@solana/web3.js@^1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.27.0.tgz#e8db617455a03e6cfc087fa692cdb03e722b71aa"
+  integrity sha512-1vz503S39CgVwT3b8Y8HhDl4u7NpyoG/UtJKwlPZCYx+11q/qqcfpdbHXNSq2cu7FQma3MHa5wHILd8k1Vz2wQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@solana/buffer-layout" "^3.0.0"
