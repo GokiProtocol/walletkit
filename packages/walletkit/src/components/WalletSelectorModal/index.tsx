@@ -24,9 +24,13 @@ export enum ModalStep {
   LedgerAdvanced = "ledger-advanced",
 }
 
+const defaultOnWalletKitError = (err: Error) => {
+  console.error(err);
+};
+
 export const WalletSelectorModal: React.FC<Props> = ({
   app,
-  onError,
+  onWalletKitError = defaultOnWalletKitError,
   initialStep = ModalStep.Intro,
   ...modalProps
 }: Props) => {
@@ -134,7 +138,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
           onBack={() => {
             setStep(ModalStep.Select);
           }}
-          onError={onError}
+          onError={onWalletKitError}
           onSuccess={onDismiss}
         />
       )}

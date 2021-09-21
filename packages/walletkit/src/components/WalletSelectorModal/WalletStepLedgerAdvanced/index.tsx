@@ -7,7 +7,7 @@ import { ButtonWithFooter } from "../ButtonWithFooter";
 
 interface Props {
   onBack?: () => void;
-  onError?: (err: Error) => void;
+  onError: (err: Error) => void;
   onSuccess?: () => void;
 }
 

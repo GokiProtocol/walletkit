@@ -25,5 +25,5 @@ export interface WalletKitArgs {
   /**
    * Called when an error occurs.
    */
-  onError?: (err: Error) => void;
+  onWalletKitError?: (err: Error) => void;
 }
