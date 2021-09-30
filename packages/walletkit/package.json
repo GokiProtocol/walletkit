@@ -21,6 +21,7 @@
     "url": "https://github.com/GokiProtocol/walletkit/issues"
   },
   "devDependencies": {
+    "@saberhq/solana-contrib": "^1.3.5",
     "@saberhq/use-solana": "^1.3.5",
     "@types/react": "^17.0.25",
     "@types/react-dom": "^17.0.9",
@@ -31,7 +32,6 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@reach/dialog": "^0.16.0",
-    "@saberhq/solana-contrib": "^1.3.5",
     "polished": "^4.1.3",
     "react-device-detect": "^2.0.0",
     "react-spring": "^9.2.4",
@@ -39,6 +39,7 @@
     "unstated-next": "^1.1.0"
   },
   "peerDependencies": {
+    "@saberhq/solana-contrib": "^1.3.5",
     "@saberhq/use-solana": "^1.3.5",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
