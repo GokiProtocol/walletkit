@@ -33,7 +33,7 @@
     "@reach/dialog": "^0.16.0",
     "@saberhq/solana-contrib": "^1.3.0",
     "polished": "^4.1.3",
-    "react-device-detect": "^1.17.0",
+    "react-device-detect": "^2.0.0",
     "react-spring": "^9.2.4",
     "react-use-gesture": "^9.1.3",
     "unstated-next": "^1.1.0"
