@@ -7,10 +7,13 @@
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
-    "@saberhq/eslint-config-react": "^1.3.14",
+    "@saberhq/eslint-config-react": "^1.3.15",
     "eslint": "^7.32.0",
     "eslint-plugin-unused-imports": "^1.1.5",
+    "husky": "^7.0.2",
     "lerna": "^4.0.0",
+    "lint-staged": "^11.2.2",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.3"
   },
   "workspaces": [
@@ -19,6 +22,11 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "eslint --cache .",
-    "lint:ci": "eslint --cache . --max-warnings=0"
+    "lint:ci": "eslint --cache . --max-warnings=0",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{js,json,jsx,html,css,md}": "prettier --write"
   }
 }
