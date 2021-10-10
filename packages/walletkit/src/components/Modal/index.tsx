@@ -1,6 +1,4 @@
-import "@reach/dialog/styles.css";
-
-import { css } from "@emotion/react";
+import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import darken from "polished/lib/color/darken";
@@ -59,6 +57,32 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <>
+      {/* @reach/dialog/styles.css */}
+      <Global
+        styles={css`
+          :root {
+            --reach-dialog: 1;
+          }
+
+          [data-reach-dialog-overlay] {
+            background: hsla(0, 0%, 0%, 0.33);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+          }
+
+          [data-reach-dialog-content] {
+            width: 50vw;
+            margin: 10vh auto;
+            background: white;
+            padding: 2rem;
+            outline: none;
+          }
+        `}
+      />
       {fadeTransition(
         (props, item) =>
           item && (
