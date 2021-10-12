@@ -2684,10 +2684,10 @@
     eslint-plugin-unused-imports "^1.1.5"
     prettier "^2.4.1"
 
-"@saberhq/solana-contrib@^1.3.14", "@saberhq/solana-contrib@^1.3.15":
-  version "1.3.15"
-  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-1.3.15.tgz#bbb548b14e5ff9b9339fdfde162fb3ed6071425f"
-  integrity sha512-jJk3ZJYLgH3MQBnTLzaiaVBRqmAh4AA3H+VQabu2lkM/E2dmX7m1OAWLMueyxMiMnf6ORqyLLs/VErlriAAElg==
+"@saberhq/solana-contrib@^1.3.14", "@saberhq/solana-contrib@^1.3.15", "@saberhq/solana-contrib@^1.3.16":
+  version "1.3.16"
+  resolved "https://registry.yarnpkg.com/@saberhq/solana-contrib/-/solana-contrib-1.3.16.tgz#04eb7af95583e49fd50d097eccb623d0109645b1"
+  integrity sha512-V7iPdM5HjAsMIz+35foJ8T06P6WnBc+20AChIRZjgddKZs8kPRpWom1DqvvFP4kjLo94bjU5oaAcEuUgjDGe9Q==
   dependencies:
     "@types/promise-retry" "^1.1.3"
     "@types/retry" "^0.12.1"
@@ -2708,14 +2708,14 @@
     tiny-invariant "^1.1.0"
 
 "@saberhq/use-solana@^1.3.15":
-  version "1.3.15"
-  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-1.3.15.tgz#547e2250500f15ded402f16fd2cb0f99938e93c3"
-  integrity sha512-HOfBfIbDAW7AB2s+ZMPntjA/yUxZ9i7fLTRc7J/iUFBz8vItXSgVSpWIjCM4bovMz4+cdVigIbZZvJBhbGTjBQ==
+  version "1.3.16"
+  resolved "https://registry.yarnpkg.com/@saberhq/use-solana/-/use-solana-1.3.16.tgz#1361f717e8aa590b22e4dc91a53ecdefcf5e6a74"
+  integrity sha512-vi+g4PrNqw4cp5a8y//lGzok9fxpBJgOwDAvIur9HARpxTv0/02KnSgM5gv1ejUlFprp0UuxLrjSPKhEWTQQIA==
   dependencies:
     "@ledgerhq/hw-transport" "^6.7.0"
     "@ledgerhq/hw-transport-webusb" "^6.7.0"
     "@project-serum/sol-wallet-adapter" "^0.2.5"
-    "@saberhq/solana-contrib" "^1.3.15"
+    "@saberhq/solana-contrib" "^1.3.16"
     "@types/bs58" "^4.0.1"
     bs58 "^4.0.1"
     eventemitter3 "^4.0.7"
