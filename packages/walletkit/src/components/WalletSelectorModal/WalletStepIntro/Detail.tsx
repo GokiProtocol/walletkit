@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 
 interface Props {
   icon: React.ReactNode;
-  title: string;
-  description: string;
+  title: React.ReactNode | string;
+  description: React.ReactNode | string;
 }
 
 export const Detail: React.FC<Props> = ({

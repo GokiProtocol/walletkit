@@ -21,6 +21,9 @@ const App: React.FC = () => {
       app={{
         name: "My App",
       }}
+      langOption={{
+        "hn": { nativeName: "Hindi" },
+      }}
     >
       <Body />
     </WalletKitProvider>

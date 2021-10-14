@@ -3,6 +3,7 @@ import type { WalletProviderInfo } from "@saberhq/use-solana";
 import { WALLET_PROVIDERS, WalletType } from "@saberhq/use-solana";
 import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import { useTranslation, Trans } from "react-i18next";
 
 import { WalletProviderOption } from "./WalletProviderOption";
 
@@ -30,8 +31,8 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
             ? -1
             : 1
           : a.isInstalled?.() ?? true
-          ? -1
-          : 1;
+            ? -1
+            : 1;
       }
       return a.name < b.name ? -1 : 1;
     })
@@ -76,6 +77,7 @@ export const WalletStepSelect: React.FC<Props> = ({
   const [providerInfo, setProviderInfo] = useState<readonly ProviderInfo[]>(
     getWalletProviders()
   );
+  const { t } = useTranslation();
 
   useEffect(() => {
     // wait a second for everything to load
@@ -87,7 +89,11 @@ export const WalletStepSelect: React.FC<Props> = ({
 
   return (
     <>
-      <Heading>Select your wallet</Heading>
+      <Heading>
+        <Trans i18nKey="modal.walletStepSelect.heading">
+          Select your wallet
+        </Trans>
+      </Heading>
       <ScrollArea>
         <Wallets>
           {providerInfo
@@ -112,7 +118,15 @@ export const WalletStepSelect: React.FC<Props> = ({
         </Wallets>
         <ShowUninstalledWrapper>
           <ShowUninstalled onClick={() => setShowUninstalled(!showUninstalled)}>
-            {showUninstalled ? "Hide" : "Show"} uninstalled wallets
+            {showUninstalled ?
+              <Trans i18nKey="modal.walletStepSelect.hideUninstalledWallet">
+                Hide uninstalled wallets
+              </Trans>
+              :
+              <Trans i18nKey="modal.walletStepSelect.showUninstalledWallet">
+                Show uninstalled wallets
+              </Trans>
+            }
           </ShowUninstalled>
         </ShowUninstalledWrapper>
       </ScrollArea>
