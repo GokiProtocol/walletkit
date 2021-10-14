@@ -15,7 +15,7 @@
     "url": "git+https://github.com/GokiProtocol/walletkit.git"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc -w"
   },
   "bugs": {
     "url": "https://github.com/GokiProtocol/walletkit/issues"

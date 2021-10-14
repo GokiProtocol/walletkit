@@ -15,6 +15,12 @@ It is intended to be used with [use-solana](https://github.com/saber-hq/saber-co
 yarn add @gokiprotocol/walletkit
 ```
 
-## Usage
+---
 
-Check out the [example app](/packages/example) to understand how to use this library.
+## Dev Workflow
+
+1. Link the `package/walletkit` using `yarn link`
+2. In `package/walletkit` run `yarn build` (This will watch the ts files for changes and will also build it)
+3. In `package/example` link this walletkit instead of installing it by `npm link @gokiprotocol/walletkit`
+4. `yarn run` to get the example started running!
+5. DEV
