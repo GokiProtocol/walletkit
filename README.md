@@ -8,6 +8,13 @@
 
 ---
 
+## Demo
+
+![walletkit-multilang](https://user-images.githubusercontent.com/22261173/137582726-9e0478dd-3168-4006-b77b-bef67843a5a4.gif)
+
+
+---
+
 ## TODO
 
 1. Get a better fallback UI for suspense
@@ -15,12 +22,12 @@
 
 ---
 
+## Source
+
 # walletkit 🔑
 
 [![NPM](https://img.shields.io/npm/v/@gokiprotocol/walletkit)](https://www.npmjs.com/package/@gokiprotocol/walletkit)
 [![License](https://img.shields.io/npm/l/@gokiprotocol/walletkit)](/LICENSE)
-
-![Banner](/images/banner.png)
 
 WalletKit is a React library that allows a Solana dApp to display a modal for connecting wallets.
 
