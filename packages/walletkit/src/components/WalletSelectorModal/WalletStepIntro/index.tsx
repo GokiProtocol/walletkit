@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
-import { Trans, useTranslation, getI18n } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-import { LangOption } from "../../../types";
+import type { LangOption } from "../../../types";
 import { ButtonWithFooter } from "../ButtonWithFooter";
+import { LanguageToggle } from "../LanguageToggle";
 import { Detail } from "./Detail";
 import { BoltIcon, ConnectDots, LockIcon, SolanaIcon } from "./icons";
-import { LanguageToggle } from "../LanguageToggle";
 
 interface Props {
   appName: string;
@@ -31,61 +31,54 @@ export const WalletStepIntro: React.FC<Props> = ({
         </AppIcons>
       </AppIconsWrapper>
       <Instruction>
-        <Trans i18nKey="modal.walletStepIntro.instruction">
-          To use {{ appName }}, you need to connect a Solana wallet
-        </Trans>
+        {t(
+          "modal.walletStepIntro.instruction",
+          `To use {{appName}}, you need to connect to a Solana wallet`,
+          { appName: appName }
+        )}
       </Instruction>
       <LanguageToggle langOption={langOption} />
       <DetailsWrapper>
         <Detail
           icon={<LockIcon />}
-          title={
-            <Trans i18nKey="modal.walletStepIntro.detailsOne.title">
-              You control your crypto
-            </Trans>
-          }
-          description={
-            <Trans i18nKey="modal.walletStepIntro.detailsOne.description">
-              Using a non-custodial wallet enables you to control your crypto without having to trust third parties.
-            </Trans>
-          }
+          title={t(
+            "modal.walletStepIntro.detailsOne.title",
+            "You control your crypto"
+          )}
+          description={t(
+            "modal.walletStepIntro.detailsOne.description",
+            "Using a non-custodial wallet enables you to control your crypto without having to trust third parties."
+          )}
         />
         <Detail
           icon={<BoltIcon />}
-          title={
-            <Trans i18nKey="modal.walletStepIntro.detailsTwo.title">
-              Transact quickly and cheaply
-            </Trans>
-          }
-          description={
-            <Trans i18nKey="modal.walletStepIntro.detailsTwo.description">
-              Solana's scalability ensures transactions remain less than $0.01 and at lightning fast speeds.
-            </Trans>
-          }
+          title={t(
+            "modal.walletStepIntro.detailsTwo.title",
+            "Transact quickly and cheaply"
+          )}
+          description={t(
+            "modal.walletStepIntro.detailsTwo.description",
+            "Solana's scalability ensures transactions remain less than $0.01 and at lightning fast speeds."
+          )}
         />
       </DetailsWrapper>
       <ButtonWithFooter
         onClick={onContinue}
         footer={
           <>
-            <Trans i18nKey="footer.title">
-              First time using Solana?&nbsp;&nbsp;
-            </Trans>
+            {t("footer.title", "First time using Solana? ")}
+            {"  "}
             <a
               href="https://learn.goki.so"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Trans i18nKey="footer.button">
-                Learn more
-              </Trans>
+              {t("footer.button", "Learn more")}
             </a>
           </>
         }
       >
-        <Trans i18nKey="buttons.continue">
-          Conitnue
-        </Trans>
+        {t("buttons.continue", "Continue")}
       </ButtonWithFooter>
     </Wrapper>
   );

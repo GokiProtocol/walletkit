@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
 import { useEffect, useMemo } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { ButtonWithFooter } from "../ButtonWithFooter";
 
@@ -33,19 +33,18 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
   return (
     <Wrapper>
       <IconWrapper>{icon}</IconWrapper>
-      <h2>
-        <Trans i18nKey="modal.walletStepRedirect.title">
-          You're being redirected!
-        </Trans>
-      </h2>
+      <h2>{t("modal.walletStepRedirect.title", "You're being redirected!")}</h2>
       <p>
-        <Trans i18nKey="modal.walletStepRedirect.ix1">
-          In order to use {{ infoName: info.name }}, you must first install their browser extension.
-        </Trans>
+        {t(
+          "modal.walletStepRedirect.ix1",
+          "In order to use {{ infoName }}, you must first install their browser extension.",
+          { infoName: info.name }
+        )}
       </p>
       <p>
-        <Trans i18nKey="modal.walletStepRedirect.ix2">
-          Make sure you only install their wallet from the official <strong>{{ providerURL }}</strong> website.
+        <Trans t={t} i18nKey="modal.walletStepRedirect.ix2">
+          Make sure you only install their wallet from the official{" "}
+          <strong>{{ providerURL }}</strong> website.
         </Trans>
       </p>
       <ButtonWithFooter
@@ -54,9 +53,7 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
         }}
         footer={
           <>
-            <Trans i18nKey="footer.finishedInstalling">
-              Finished Intsalling?{"  "}
-            </Trans>
+            {t("footer.finishedInstalling", "Finished Installing?")}{" "}
             <a
               href="#"
               onClick={(e) => {
@@ -65,16 +62,12 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
                 window.location.reload();
               }}
             >
-              <Trans i18nKey="buttons.refresh">
-                {"  "}Refresh
-              </Trans>
+              {t("buttons.refresh", "Refresh")}
             </a>
           </>
         }
       >
-        <Trans i18nKey="buttons.continue">
-          Continue
-        </Trans>
+        {t("buttons.continue", "Continue")}
       </ButtonWithFooter>
     </Wrapper>
   );

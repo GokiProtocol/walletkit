@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { useSolana, WalletType } from "@saberhq/use-solana";
 import { useCallback, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import { BottomArea, FooterText } from "../ButtonWithFooter";
 import type { ProviderInfo } from "../WalletStepSelect";
@@ -72,7 +72,12 @@ export const WalletStepConnecting: React.FC<Props> = ({
       <ConnectingWrapper>
         {error ? (
           <ConnectingHeader>
-            <Connecting><Trans i18nKey="modal.walletStepConnecting.error.header">Error Connecting Wallet</Trans></Connecting>
+            <Connecting>
+              {t(
+                "modal.walletStepConnecting.error.header",
+                "Error Connecting Wallet"
+              )}
+            </Connecting>
             <ConnectingInstructions>{error}</ConnectingInstructions>
             <ConnectingInstructions>
               <a
@@ -87,18 +92,17 @@ export const WalletStepConnecting: React.FC<Props> = ({
                   void doActivate();
                 }}
               >
-                <Trans i18nKey="buttons.retry">
-                  Retry
-                </Trans>
+                {t("buttons.retry", "Retry")}
               </a>
             </ConnectingInstructions>
           </ConnectingHeader>
         ) : (
           <ConnectingHeader>
             <Connecting>
-              <Trans i18nKey="modal.walletStepConnecting.connecting.header">
-                Connecting...
-              </Trans>
+              {t(
+                "modal.walletStepConnecting.connecting.header",
+                "Connecting..."
+              )}
             </Connecting>
             {isManualConnect ? (
               <ConnectingInstructions>
@@ -121,9 +125,11 @@ export const WalletStepConnecting: React.FC<Props> = ({
               </ConnectingInstructions>
             ) : (
               <ConnectingInstructions>
-                <Trans i18nKey="modal.walletStepConnecting.connecting.instructions">
-                  Please unlock your {{ walletName: walletProviderInfo.name }} wallet
-                </Trans>
+                {t(
+                  "modal.walletStepConnecting.connecting.instructions",
+                  "Please unlock your {{ walletName }} wallet",
+                  { walletName: walletProviderInfo.name }
+                )}
               </ConnectingInstructions>
             )}
           </ConnectingHeader>
@@ -137,9 +143,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
         </AppIconsWrapper>
         <BottomArea>
           <FooterText>
-            <Trans i18nKey="modal.walletStepConnecting.footer.title">
-              Having trouble?{"  "}
-            </Trans>
+            {t("modal.walletStepConnecting.footer.title", "Having trouble?")}{" "}
             <a
               href="#"
               onClick={(e) => {
@@ -148,9 +152,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
                 onBack?.();
               }}
             >
-              <Trans i18nKey="buttons.goBack">
-                Go back{"  "}
-              </Trans>
+              {t("buttons.goBack", "Go Back")}
             </a>
           </FooterText>
         </BottomArea>
