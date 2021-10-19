@@ -1350,6 +1350,20 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
+"@gokiprotocol/walletkit@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@gokiprotocol/walletkit/-/walletkit-1.3.1.tgz#3af14890795658d6e652d8f3c50417115e98e0a0"
+  integrity sha512-p5SqoV8inZMEE72VkrG5HpY/9Bsy9eIntfnOTjazK+sdOK1MmCMDHtrCXXP+OwjBBFlnuGvHV1j9sYTN/R5LOA==
+  dependencies:
+    "@emotion/react" "^11.4.1"
+    "@emotion/styled" "^11.3.0"
+    "@reach/dialog" "^0.16.0"
+    polished "^4.1.3"
+    react-device-detect "^2.0.0"
+    react-spring "^9.2.6"
+    react-use-gesture "^9.1.3"
+    unstated-next "^1.1.0"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
