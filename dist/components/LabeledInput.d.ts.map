@@ -1,1 +1,0 @@
-{"version":3,"file":"LabeledInput.d.ts","sourceRoot":"","sources":["../../src/components/LabeledInput.tsx"],"names":[],"mappings":";AAEA,aAAK,KAAK,GAAG,KAAK,CAAC,iBAAiB,CAClC,KAAK,CAAC,mBAAmB,CAAC,gBAAgB,CAAC,EAC3C,gBAAgB,CACjB,GAAG;IACF,KAAK,EAAE,MAAM,CAAC;IACd,IAAI,EAAE,MAAM,CAAC;CACd,CAAC;AAEF,eAAO,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC,KAAK,CAYxC,CAAC"}

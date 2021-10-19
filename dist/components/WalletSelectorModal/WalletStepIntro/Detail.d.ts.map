@@ -1,1 +1,0 @@
-{"version":3,"file":"Detail.d.ts","sourceRoot":"","sources":["../../../../src/components/WalletSelectorModal/WalletStepIntro/Detail.tsx"],"names":[],"mappings":";AAEA,UAAU,KAAK;IACb,IAAI,EAAE,KAAK,CAAC,SAAS,CAAC;IACtB,KAAK,EAAE,KAAK,CAAC,SAAS,GAAG,MAAM,CAAC;IAChC,WAAW,EAAE,KAAK,CAAC,SAAS,GAAG,MAAM,CAAC;CACvC;AAED,eAAO,MAAM,MAAM,EAAE,KAAK,CAAC,EAAE,CAAC,KAAK,CAclC,CAAC"}

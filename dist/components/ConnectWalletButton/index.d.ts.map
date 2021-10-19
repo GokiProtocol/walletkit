@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/components/ConnectWalletButton/index.tsx"],"names":[],"mappings":";AAOA,UAAU,KACR,SAAQ,IAAI,CACV,KAAK,CAAC,iBAAiB,CACrB,KAAK,CAAC,oBAAoB,CAAC,iBAAiB,CAAC,EAC7C,iBAAiB,CAClB,EACD,SAAS,CACV;IACD,OAAO,CAAC,EAAE,SAAS,GAAG,WAAW,CAAC;CACnC;AAsCD,eAAO,MAAM,mBAAmB,EAAE,KAAK,CAAC,EAAE,CAAC,KAAK,CAoB/C,CAAC"}
