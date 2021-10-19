@@ -22,6 +22,12 @@
 
 ---
 
+## To Use
+
+Get the package from the `release` branch. [Here](https://github.com/Aadhinana/walletkit/tree/release)
+
+---
+
 ## Source
 
 # walletkit 🔑
