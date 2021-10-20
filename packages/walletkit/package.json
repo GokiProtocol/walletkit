@@ -11,10 +11,7 @@
     "dist/",
     "src/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GokiProtocol/walletkit.git"
-  },
+  "repository": "git@github.com:GokiProtocol/walletkit.git",
   "scripts": {
     "build": "rm -fr dist/ && tsc && tsc -P tsconfig.esm.json"
   },
