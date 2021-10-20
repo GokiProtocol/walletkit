@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "lib": ["ES2015", "DOM"],
+    "lib": ["ES2017", "DOM"],
     "target": "ES6",
     "module": "CommonJS",
     "jsx": "react",
     "moduleResolution": "node",
+
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+
     "esModuleInterop": true,
     "skipLibCheck": true,
     "preserveConstEnums": true,

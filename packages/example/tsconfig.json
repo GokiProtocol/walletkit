@@ -4,9 +4,6 @@
   "include": ["src/"],
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
