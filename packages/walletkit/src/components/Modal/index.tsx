@@ -93,6 +93,7 @@ export const Modal: React.FC<ModalProps> = ({
               darkenOverlay={darkenOverlay}
             >
               <ModalWrapper
+                className="goki-walletkit-modal-wrapper"
                 aria-label="dialog content"
                 {...(isMobile
                   ? {
