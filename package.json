@@ -7,14 +7,18 @@
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
-    "@saberhq/eslint-config-react": "^1.3.15",
-    "eslint": "^7.32.0",
+    "@rushstack/eslint-patch": "^1.0.8",
+    "@saberhq/eslint-config": "^1.3.18",
+    "@saberhq/eslint-config-react": "^1.3.18",
+    "eslint": "^7",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-unused-imports": "^1.1.5",
     "husky": "^7.0.2",
     "lerna": "^4.0.0",
-    "lint-staged": "^11.2.2",
+    "lint-staged": "^11.2.3",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   },
   "workspaces": [
     "packages/*"
@@ -28,5 +32,6 @@
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix",
     "*.{js,json,jsx,html,css,md}": "prettier --write"
-  }
+  },
+  "packageManager": "yarn@3.0.2"
 }
