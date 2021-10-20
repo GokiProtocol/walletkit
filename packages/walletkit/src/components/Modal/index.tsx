@@ -1,10 +1,10 @@
 import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
+import { animated, useSpring, useTransition } from "@react-spring/web";
 import darken from "polished/lib/color/darken";
 import React from "react";
 import { isMobile } from "react-device-detect";
-import { animated, useSpring, useTransition } from "react-spring";
 import { useGesture } from "react-use-gesture";
 
 import { BackIcon, CloseIcon, SolanaLogo } from "./icons";
@@ -93,6 +93,7 @@ export const Modal: React.FC<ModalProps> = ({
               darkenOverlay={darkenOverlay}
             >
               <ModalWrapper
+                className="goki-walletkit-modal-wrapper"
                 aria-label="dialog content"
                 {...(isMobile
                   ? {
