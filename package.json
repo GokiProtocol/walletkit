@@ -30,7 +30,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix",
-    "*.{js,json,jsx,html,css,md}": "prettier --write"
+    "*.{js,json,jsx,html,css,md,yml,yaml}": "prettier --write"
   },
   "packageManager": "yarn@3.0.2"
 }
