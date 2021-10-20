@@ -23,8 +23,6 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('./.yarn/**/*.js') }}
       - run: yarn install
       - run: yarn build
-      - run: |
-          echo 'npmAuthToken: "${NPM_AUTH_TOKEN}"' >> .yarnrc.yml
       - name: Publish
         run: |
           echo 'npmAuthToken: "${NPM_AUTH_TOKEN}"' >> .yarnrc.yml
