@@ -10,7 +10,7 @@
     "@rushstack/eslint-patch": "^1.0.8",
     "@saberhq/eslint-config": "^1.3.18",
     "@saberhq/eslint-config-react": "^1.3.18",
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.1",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-plugin-import": "^2.25.2",
     "husky": "^7.0.4",
