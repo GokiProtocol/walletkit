@@ -3,8 +3,8 @@ import type React from "react";
 import type { ModalStep } from "./components/WalletSelectorModal";
 
 export type LangOption = {
-  [T in string]: { nativeName: string }
-}
+  [T in string]: { nativeName: string };
+};
 
 export interface WalletKitArgs {
   /**
