@@ -22,7 +22,7 @@ export const initI18n = async (): Promise<TFunction> =>
       })
     )
     .init({
-      fallbackLng: "en-US",
+      fallbackLng: "en",
       debug: true,
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default

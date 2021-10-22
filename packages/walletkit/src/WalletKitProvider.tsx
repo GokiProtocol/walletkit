@@ -31,7 +31,7 @@ interface Props extends Omit<WalletKitArgs, "locales">, UseSolanaArgs {
 }
 
 export const DEFAULT_LOCALES = {
-  "en-US": { nativeName: "English" },
+  en: { nativeName: "English" },
 };
 
 export const WalletKitProvider: React.FC<Props> = ({

@@ -37,5 +37,5 @@ export interface WalletKitArgs {
   /**
    * Supported locales for WalletKit.
    */
-  locales: Locales<"en-US">;
+  locales: Locales<"en">;
 }
