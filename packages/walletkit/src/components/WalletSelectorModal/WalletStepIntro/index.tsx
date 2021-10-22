@@ -1,25 +1,25 @@
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
 
-import type { LangOption } from "../../../types";
+import type { Locales } from "../../../types";
 import { ButtonWithFooter } from "../ButtonWithFooter";
 import { LanguageToggle } from "../LanguageToggle";
 import { Detail } from "./Detail";
 import { BoltIcon, ConnectDots, LockIcon, SolanaIcon } from "./icons";
 
-interface Props {
+interface Props<L extends string> {
   appName: string;
   appIcon?: React.ReactNode;
-  langOption?: LangOption;
+  locales: Locales<L>;
   onContinue?: () => void;
 }
 
-export const WalletStepIntro: React.FC<Props> = ({
+export const WalletStepIntro = <L extends string>({
   appName,
   appIcon,
-  langOption,
+  locales,
   onContinue,
-}: Props) => {
+}: Props<L>): React.ReactElement => {
   const { t } = useTranslation();
   return (
     <Wrapper>
@@ -37,7 +37,7 @@ export const WalletStepIntro: React.FC<Props> = ({
           { appName: appName }
         )}
       </Instruction>
-      <LanguageToggle langOption={langOption} />
+      <LanguageToggle locales={locales} />
       <DetailsWrapper>
         <Detail
           icon={<LockIcon />}

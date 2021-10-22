@@ -2,8 +2,12 @@ import type React from "react";
 
 import type { ModalStep } from "./components/WalletSelectorModal";
 
-export type LangOption = {
-  [T in string]: { nativeName: string };
+export interface LocaleInfo {
+  nativeName: string;
+}
+
+export type Locales<L extends string> = {
+  [K in L]: LocaleInfo;
 };
 
 export interface WalletKitArgs {
@@ -31,7 +35,7 @@ export interface WalletKitArgs {
    */
   onWalletKitError?: (err: Error) => void;
   /**
-   * To select the different languages that is provided.
+   * Supported locales for WalletKit.
    */
-  langOption?: LangOption;
+  locales: Locales<"en-US">;
 }

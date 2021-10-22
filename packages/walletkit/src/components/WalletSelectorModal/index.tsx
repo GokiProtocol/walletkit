@@ -32,7 +32,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
   app,
   onWalletKitError = defaultOnWalletKitError,
   initialStep = ModalStep.Intro,
-  langOption,
+  locales,
   ...modalProps
 }: Props) => {
   const appIcon = useMemo(() => app.icon ?? <DefaultAppIcon />, [app.icon]);
@@ -66,21 +66,21 @@ export const WalletSelectorModal: React.FC<Props> = ({
         step === ModalStep.Intro
           ? undefined
           : () => {
-            switch (step) {
-              case ModalStep.Select:
-                setStep(ModalStep.Intro);
-                break;
-              case ModalStep.Redirect:
-                setStep(ModalStep.Select);
-                break;
-              case ModalStep.Connecting:
-                setStep(ModalStep.Select);
-                break;
-              case ModalStep.LedgerAdvanced:
-                setStep(ModalStep.Select);
-                break;
+              switch (step) {
+                case ModalStep.Select:
+                  setStep(ModalStep.Intro);
+                  break;
+                case ModalStep.Redirect:
+                  setStep(ModalStep.Select);
+                  break;
+                case ModalStep.Connecting:
+                  setStep(ModalStep.Select);
+                  break;
+                case ModalStep.LedgerAdvanced:
+                  setStep(ModalStep.Select);
+                  break;
+              }
             }
-          }
       }
       hideSolanaLogo={step === ModalStep.Intro}
     >
@@ -88,7 +88,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
         <WalletStepIntro
           appName={app.name}
           appIcon={appIcon}
-          langOption={langOption}
+          locales={locales}
           onContinue={() => setStep(ModalStep.Select)}
         />
       )}

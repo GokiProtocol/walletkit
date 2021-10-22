@@ -3,17 +3,19 @@ import type { ChangeEventHandler } from "react";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import type { LangOption } from "../../types";
+import type { LocaleInfo, Locales } from "../../types";
 
-interface Props
+interface Props<L extends string>
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  langOption?: LangOption;
+  locales: Locales<L>;
 }
 
-export const LanguageToggle: React.FC<Props> = ({ langOption }: Props) => {
+export const LanguageToggle = <L extends string>({
+  locales,
+}: Props<L>): React.ReactElement => {
   const { t, i18n } = useTranslation();
 
   const [lang, setLang] = useState<string>(i18n.language);
@@ -29,10 +31,10 @@ export const LanguageToggle: React.FC<Props> = ({ langOption }: Props) => {
     <BottomArea>
       <label>{t("changeLanguage", "Change Language")}</label>
       <select id="language" value={lang} onChange={handleSelectLanguage}>
-        {Object.keys(langOption!).map((lng) => (
+        {Object.entries<LocaleInfo>(locales).map(([locale, info]) => (
           <option
-            key={lng}
-            value={lng}
+            key={locale}
+            value={locale}
             style={{
               border: "1px solid #dfdfdf",
               boxSizing: "border-box",
@@ -40,7 +42,7 @@ export const LanguageToggle: React.FC<Props> = ({ langOption }: Props) => {
               padding: "0 4px",
             }}
           >
-            {langOption![lng]!.nativeName}
+            {info.nativeName}
           </option>
         ))}
       </select>

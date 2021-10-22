@@ -1,14 +1,21 @@
 import type { UseSolanaArgs } from "@saberhq/use-solana";
 import { SolanaProvider } from "@saberhq/use-solana";
-import React, { Suspense, useContext, useMemo, useState } from "react";
+import i18next from "i18next";
+import React, {
+  Suspense,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { I18nextProvider } from "react-i18next";
 
 import {
   ModalStep,
   WalletSelectorModal,
 } from "./components/WalletSelectorModal";
-import I18n from "./i18n";
-import type { LangOption, WalletKitArgs } from "./types";
+import { initI18n } from "./i18n";
+import type { Locales, WalletKitArgs } from "./types";
 
 export { useConnectedWallet, useSolana, useWallet } from "@saberhq/use-solana";
 
@@ -18,15 +25,19 @@ export interface WalletKit {
 
 const WalletKitContext = React.createContext<WalletKit | null>(null);
 
-interface Props extends WalletKitArgs, UseSolanaArgs {
-  langOption?: LangOption;
+interface Props extends Omit<WalletKitArgs, "locales">, UseSolanaArgs {
+  additionalLocales?: Locales<string>;
   children: React.ReactNode;
 }
+
+export const DEFAULT_LOCALES = {
+  "en-US": { nativeName: "English" },
+};
 
 export const WalletKitProvider: React.FC<Props> = ({
   children,
   app,
-  langOption,
+  additionalLocales,
   initialStep = ModalStep.Intro,
   ...solanaProviderArgs
 }: Props) => {
@@ -36,11 +47,18 @@ export const WalletKitProvider: React.FC<Props> = ({
     return { connect: () => setShowWalletSelector(true) };
   }, []);
 
-  const l: LangOption = { en: { nativeName: "English" }, ...langOption };
+  const locales = {
+    ...DEFAULT_LOCALES,
+    ...additionalLocales,
+  };
+
+  useEffect(() => {
+    void initI18n();
+  });
 
   return (
     <Suspense fallback="loading..">
-      <I18nextProvider i18n={I18n}>
+      <I18nextProvider i18n={i18next}>
         <SolanaProvider {...solanaProviderArgs}>
           <WalletKitContext.Provider value={kit}>
             <WalletSelectorModal
@@ -48,7 +66,7 @@ export const WalletKitProvider: React.FC<Props> = ({
               initialStep={initialStep}
               isOpen={showWalletSelector}
               onDismiss={() => setShowWalletSelector(false)}
-              langOption={l}
+              locales={locales}
             />
             {children}
           </WalletKitContext.Provider>
