@@ -36,7 +36,7 @@ export const WalletKitProvider: React.FC<Props> = ({
     return { connect: () => setShowWalletSelector(true) };
   }, []);
 
-  const l: LangOption = { en: { nativeName: "Englilsh" }, ...langOption };
+  const l: LangOption = { en: { nativeName: "English" }, ...langOption };
 
   return (
     <Suspense fallback="loading..">
