@@ -8,6 +8,8 @@ import {
 } from "./components/WalletSelectorModal";
 import type { WalletKitArgs } from "./types";
 
+export { useConnectedWallet, useSolana, useWallet } from "@saberhq/use-solana";
+
 export interface WalletKit {
   connect: () => void;
 }
