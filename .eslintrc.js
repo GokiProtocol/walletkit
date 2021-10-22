@@ -1,5 +1,7 @@
 "use strict";
 
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 module.exports = {
   extends: ["@saberhq/eslint-config-react"],
   env: {
@@ -9,9 +11,5 @@ module.exports = {
   ignorePatterns: ["*.js"],
   parserOptions: {
     project: "tsconfig.json",
-  },
-  rules: {
-    "react/react-in-jsx-scope": "off",
-    "react/no-unescaped-entities": "off",
   },
 };
