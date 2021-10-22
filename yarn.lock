@@ -2448,7 +2448,7 @@ __metadata:
     "@emotion/babel-plugin": ^11.3.0
     "@emotion/react": ^11.5.0
     "@emotion/styled": ^11.3.0
-    "@gokiprotocol/walletkit": ^1.4.4
+    "@gokiprotocol/walletkit": ^1.4.5
     "@saberhq/solana-contrib": ^1.3.18
     "@saberhq/token-utils": ^1.3.18
     "@saberhq/use-solana": ^1.3.18
@@ -2488,7 +2488,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gokiprotocol/walletkit@^1.4.4, @gokiprotocol/walletkit@workspace:packages/walletkit":
+"@gokiprotocol/walletkit@^1.4.5, @gokiprotocol/walletkit@workspace:packages/walletkit":
   version: 0.0.0-use.local
   resolution: "@gokiprotocol/walletkit@workspace:packages/walletkit"
   dependencies:
