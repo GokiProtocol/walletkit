@@ -11,7 +11,6 @@ import I18n from "./i18n";
 import type { LangOption, WalletKitArgs } from "./types";
 
 export { useConnectedWallet, useSolana, useWallet } from "@saberhq/use-solana";
-export { useConnectedWallet, useSolana, useWallet } from "@saberhq/use-solana";
 
 export interface WalletKit {
   connect: () => void;
