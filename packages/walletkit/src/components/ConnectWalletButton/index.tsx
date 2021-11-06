@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import lighten from "polished/lib/color/lighten";
+import { useTranslation } from "react-i18next";
 
 import { useWalletKit } from "../../WalletKitProvider";
 
@@ -56,6 +57,7 @@ export const ConnectWalletButton: React.FC<Props> = ({
   ...buttonProps
 }: Props) => {
   const { connect } = useWalletKit();
+  const { t } = useTranslation();
   return (
     <Button variant={variant} {...buttonProps} onClick={connect}>
       <Logomark
@@ -64,7 +66,10 @@ export const ConnectWalletButton: React.FC<Props> = ({
           width: 16px;
         `}
       />
-      <span>Connect Wallet</span>
+      <span>
+        {t("connect_wallet", "Connect Wallet")}
+        {/* Connect Wallet */}
+      </span>
     </Button>
   );
 };

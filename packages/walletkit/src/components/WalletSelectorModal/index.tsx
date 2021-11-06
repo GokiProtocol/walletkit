@@ -32,6 +32,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
   app,
   onWalletKitError = defaultOnWalletKitError,
   initialStep = ModalStep.Intro,
+  locales,
   ...modalProps
 }: Props) => {
   const appIcon = useMemo(() => app.icon ?? <DefaultAppIcon />, [app.icon]);
@@ -87,6 +88,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
         <WalletStepIntro
           appName={app.name}
           appIcon={appIcon}
+          locales={locales}
           onContinue={() => setStep(ModalStep.Select)}
         />
       )}

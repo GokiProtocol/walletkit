@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
 import { useEffect, useMemo } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import { ButtonWithFooter } from "../ButtonWithFooter";
 
@@ -16,6 +17,7 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
       return info.url;
     }
   }, [info.url]);
+  const { t } = useTranslation();
 
   const icon =
     typeof info.icon === "string" ? <img src={info.icon} /> : <info.icon />;
@@ -31,14 +33,19 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
   return (
     <Wrapper>
       <IconWrapper>{icon}</IconWrapper>
-      <h2>You're being redirected</h2>
+      <h2>{t("modal.walletStepRedirect.title", "You're being redirected!")}</h2>
       <p>
-        In order to use {info.name}, you must first install their browser
-        extension.
+        {t(
+          "modal.walletStepRedirect.ix1",
+          "In order to use {{ infoName }}, you must first install their browser extension.",
+          { infoName: info.name }
+        )}
       </p>
       <p>
-        Make sure you only install their wallet from the official{" "}
-        <strong>{providerURL}</strong> website.
+        <Trans t={t} i18nKey="modal.walletStepRedirect.ix2">
+          Make sure you only install their wallet from the official{" "}
+          <strong>{{ providerURL }}</strong> website.
+        </Trans>
       </p>
       <ButtonWithFooter
         onClick={() => {
@@ -46,7 +53,7 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
         }}
         footer={
           <>
-            Finished installing?{" "}
+            {t("footer.finishedInstalling", "Finished Installing?")}{" "}
             <a
               href="#"
               onClick={(e) => {
@@ -55,12 +62,12 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
                 window.location.reload();
               }}
             >
-              Refresh
+              {t("buttons.refresh", "Refresh")}
             </a>
           </>
         }
       >
-        Continue
+        {t("buttons.continue", "Continue")}
       </ButtonWithFooter>
     </Wrapper>
   );
