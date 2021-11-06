@@ -9,7 +9,7 @@ WalletKit is a React library that allows a Solana dApp to display a modal for co
 You can change the z-index of the modal like so:
 
 ```
-.goki-walletkit-modal-wrapper {
-    z-index: 9999999;
+[data-reach-dialog-overlay] {
+  z-index: 9999999;
 }
 ```
