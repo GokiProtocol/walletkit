@@ -14,7 +14,7 @@ export interface WalletKit {
   connect: () => void;
 }
 
-const WalletKitContext = React.createContext<WalletKit | null>(null);
+export const WalletKitContext = React.createContext<WalletKit | null>(null);
 
 interface Props extends WalletKitArgs, UseSolanaArgs {
   children: React.ReactNode;
