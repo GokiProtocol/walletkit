@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useSolana, WalletType } from "@saberhq/use-solana";
@@ -24,7 +25,10 @@ export const WalletStepConnecting: React.FC<Props> = ({
   const walletProviderInfo = info.info;
   const icon =
     typeof walletProviderInfo.icon === "string" ? (
-      <img src={walletProviderInfo.icon} />
+      <img
+        src={walletProviderInfo.icon}
+        alt={`Icon for wallet ${walletProviderInfo.name}`}
+      />
     ) : (
       <walletProviderInfo.icon />
     );
@@ -104,7 +108,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
                   onClick={(e) => {
                     e.stopPropagation();
                     e.preventDefault();
-                    wallet?.connect();
+                    void wallet?.connect();
                   }}
                 >
                   click here

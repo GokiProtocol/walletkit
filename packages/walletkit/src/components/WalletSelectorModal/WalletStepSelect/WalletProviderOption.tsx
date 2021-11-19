@@ -17,7 +17,11 @@ export const WalletProviderOption: React.FC<Props> = ({
   const mustInstall =
     typeof window !== "undefined" && info.isInstalled?.() === false;
   const icon =
-    typeof info.icon === "string" ? <img src={info.icon} /> : <info.icon />;
+    typeof info.icon === "string" ? (
+      <img src={info.icon} alt={`Icon for wallet ${info.name}`} />
+    ) : (
+      <info.icon />
+    );
 
   const providerURL = useMemo(() => {
     try {

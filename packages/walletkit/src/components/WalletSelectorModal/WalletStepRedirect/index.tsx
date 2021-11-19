@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
 import { useEffect, useMemo } from "react";
@@ -18,7 +19,11 @@ export const WalletStepRedirect: React.FC<Props> = ({ info }: Props) => {
   }, [info.url]);
 
   const icon =
-    typeof info.icon === "string" ? <img src={info.icon} /> : <info.icon />;
+    typeof info.icon === "string" ? (
+      <img src={info.icon} alt={`Icon for wallet ${info.name}`} />
+    ) : (
+      <info.icon />
+    );
 
   // autoredirect after 1 second
   useEffect(() => {

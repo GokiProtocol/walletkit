@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from "@emotion/styled";
 import { useSolana, WALLET_PROVIDERS, WalletType } from "@saberhq/use-solana";
 import { useState } from "react";
