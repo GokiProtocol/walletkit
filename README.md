@@ -18,3 +18,20 @@ yarn add @gokiprotocol/walletkit
 ## Usage
 
 Check out the [example app](/packages/example) to understand how to use this library.
+
+## Publishing
+
+```
+yarn lerna version --force-publish --no-git-tag-version
+
+# This is important for updating yarn.lock!
+yarn install
+
+git tag vx.x.x
+git push origin HEAD
+git push origin vx.x.x
+```
+
+## License
+
+GPL v3
