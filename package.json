@@ -1,6 +1,6 @@
 {
   "name": "@gokiprotocol/walletkit-monorepo",
-  "version": "1.2.1",
+  "version": "0.0.0",
   "description": "Wallet connector modal for Solana dApps.",
   "repository": "git@github.com:GokiProtocol/walletkit.git",
   "author": "Goki Rajesh <goki@goki.so>",
