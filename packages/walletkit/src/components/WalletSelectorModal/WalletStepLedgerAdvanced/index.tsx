@@ -1,6 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from "@emotion/styled";
-import { useSolana, WALLET_PROVIDERS, WalletType } from "@saberhq/use-solana";
+import {
+  DEFAULT_WALLET_PROVIDERS,
+  DefaultWalletType,
+  useSolana,
+} from "@saberhq/use-solana";
 import { useState } from "react";
 
 import { LabeledInput } from "../../LabeledInput";
@@ -24,7 +28,7 @@ export const WalletStepLedgerAdvanced: React.FC<Props> = ({
   return (
     <Wrapper>
       <IconWrapper>
-        <WALLET_PROVIDERS.Ledger.icon />
+        <DEFAULT_WALLET_PROVIDERS.Ledger.icon />
       </IconWrapper>
       <h2>Enter your Ledger account info</h2>
       <p>
@@ -57,7 +61,7 @@ export const WalletStepLedgerAdvanced: React.FC<Props> = ({
             const account =
               accountStr === "" ? undefined : parseInt(accountStr);
             const change = changeStr === "" ? undefined : parseInt(changeStr);
-            await activate(WalletType.Ledger, {
+            await activate(DefaultWalletType.Ledger, {
               account,
               change,
             });

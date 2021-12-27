@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { useSolana, WalletType } from "@saberhq/use-solana";
+import { DefaultWalletType, useSolana } from "@saberhq/use-solana";
 import { useCallback, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -37,7 +37,8 @@ export const WalletStepConnecting: React.FC<Props> = ({
 
   const isManualConnect =
     isMobile &&
-    (info.type === WalletType.Sollet || info.type === WalletType.Solflare);
+    (info.type === DefaultWalletType.Sollet ||
+      info.type === DefaultWalletType.Solflare);
 
   const doActivate = useCallback(async () => {
     try {
