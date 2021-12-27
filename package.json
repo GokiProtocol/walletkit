@@ -8,8 +8,8 @@
   "private": true,
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@saberhq/eslint-config": "^1.7.4",
-    "@saberhq/eslint-config-react": "^1.7.4",
+    "@saberhq/eslint-config": "^1.12.4",
+    "@saberhq/eslint-config-react": "^1.12.4",
     "eslint": "^8.2.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-plugin-import": "^2.25.3",
