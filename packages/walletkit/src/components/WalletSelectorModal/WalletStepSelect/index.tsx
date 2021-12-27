@@ -1,21 +1,24 @@
 import styled from "@emotion/styled";
 import type { WalletProviderInfo } from "@saberhq/use-solana";
-import { WALLET_PROVIDERS, WalletType } from "@saberhq/use-solana";
+import {
+  DEFAULT_WALLET_PROVIDERS,
+  DefaultWalletType,
+} from "@saberhq/use-solana";
 import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
 import { WalletProviderOption } from "./WalletProviderOption";
 
 export interface ProviderInfo {
-  type: WalletType;
+  type: DefaultWalletType;
   info: WalletProviderInfo;
   mustInstall: boolean;
 }
 
 const getWalletProviders = (): readonly ProviderInfo[] => {
   const base = (
-    Object.entries(WALLET_PROVIDERS) as readonly [
-      WalletType,
+    Object.entries(DEFAULT_WALLET_PROVIDERS) as readonly [
+      DefaultWalletType,
       WalletProviderInfo
     ][]
   )
@@ -47,13 +50,13 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
       })
     )
     // no secret key for now
-    .filter((p) => p.type !== WalletType.SecretKey);
+    .filter((p) => p.type !== DefaultWalletType.SecretKey);
   return [
     ...base,
     {
-      type: WalletType.Ledger,
+      type: DefaultWalletType.Ledger,
       info: {
-        ...WALLET_PROVIDERS.Ledger,
+        ...DEFAULT_WALLET_PROVIDERS.Ledger,
         name: "Ledger (advanced)",
         url: "https://ledger.com",
         isMobile: false,

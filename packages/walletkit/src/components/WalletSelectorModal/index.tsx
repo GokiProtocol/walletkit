@@ -1,5 +1,5 @@
 import type { WalletProviderInfo } from "@saberhq/use-solana";
-import { useSolana, WalletType } from "@saberhq/use-solana";
+import { DefaultWalletType, useSolana } from "@saberhq/use-solana";
 import React, { useMemo, useState } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -93,10 +93,10 @@ export const WalletSelectorModal: React.FC<Props> = ({
       {step === ModalStep.Select && (
         <WalletStepSelect
           onSelect={(info) => {
-            disconnect();
+            void disconnect();
 
             if (
-              info.type === WalletType.Ledger &&
+              info.type === DefaultWalletType.Ledger &&
               info.info.name === "Ledger (advanced)"
             ) {
               setStep(ModalStep.LedgerAdvanced);
@@ -108,8 +108,8 @@ export const WalletSelectorModal: React.FC<Props> = ({
 
             if (
               isMobile &&
-              (info.type === WalletType.Sollet ||
-                info.type === WalletType.Solflare)
+              (info.type === DefaultWalletType.Sollet ||
+                info.type === DefaultWalletType.Solflare)
             ) {
               void activate(info.type);
             }
