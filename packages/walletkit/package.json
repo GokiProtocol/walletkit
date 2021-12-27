@@ -41,8 +41,8 @@
   "peerDependencies": {
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@saberhq/solana-contrib": "^1.7.4",
-    "@saberhq/use-solana": "^1.7.4",
+    "@saberhq/solana-contrib": "^1.12.4",
+    "@saberhq/use-solana": "^1.12.4",
     "react": "^17",
     "react-dom": "^17"
   },
