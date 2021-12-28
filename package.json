@@ -32,7 +32,7 @@
     "*.{ts,tsx}": "eslint --cache --fix",
     "*.{js,json,jsx,html,css,md,yml,yaml}": "prettier --write"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@3.1.1",
   "dependenciesMeta": {
     "@react-spring/core": {
       "built": false
