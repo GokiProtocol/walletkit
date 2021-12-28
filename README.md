@@ -9,6 +9,14 @@ WalletKit is a React library that allows a Solana dApp to display a modal for co
 
 It is intended to be used with [use-solana](https://github.com/saber-hq/saber-common/tree/master/packages/use-solana).
 
+## Developing
+
+### Adding a Wallet
+
+To add a wallet, please add it to [use-solana](https://github.com/saber-hq/saber-common/tree/master/packages/use-solana).
+
+`use-solana` supports wallet adapters from the official Solana wallet adapter library, so it may be as easy as adding a wallet to an array.
+
 ## Installation
 
 ```bash
