@@ -92,8 +92,9 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.Select && (
         <WalletStepSelect
-          onSelect={(info) => {
-            void disconnect();
+          onSelect={async (info) => {
+            // Allow the wallet to disconnect before attempting to reconnect.
+            await disconnect();
 
             if (
               info.type === DefaultWalletType.Ledger &&
@@ -111,7 +112,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
               (info.type === DefaultWalletType.Sollet ||
                 info.type === DefaultWalletType.Solflare)
             ) {
-              void activate(info.type);
+              await activate(info.type);
             }
           }}
           onInstall={(info) => {
