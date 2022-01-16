@@ -57,7 +57,7 @@ export const WalletStepConnecting: React.FC<Props> = ({
     // delay so people can see a message
     const timeout = setTimeout(() => {
       void doActivate();
-    }, 500);
+    }, 1);
     return () => clearTimeout(timeout);
     // only run this on the first display of this modal
     // eslint-disable-next-line react-hooks/exhaustive-deps
