@@ -3362,16 +3362,16 @@ __metadata:
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@gokiprotocol/walletkit": ^1.6.4
-    "@saberhq/solana-contrib": ^1.12.30
-    "@saberhq/token-utils": ^1.12.30
-    "@saberhq/use-solana": ^1.12.30
-    "@solana/web3.js": ^1.31.0
+    "@saberhq/solana-contrib": ^1.12.48
+    "@saberhq/token-utils": ^1.12.48
+    "@saberhq/use-solana": ^1.12.48
+    "@solana/web3.js": ^1.36.0
     "@types/babel__core": ^7.1.18
     "@types/bn.js": ^5.1.0
-    "@types/jest": ^27.4.0
-    "@types/node": ^17.0.8
-    "@types/react": ^17.0.38
-    "@types/react-dom": ^17.0.11
+    "@types/jest": ^27.4.1
+    "@types/node": ^17.0.21
+    "@types/react": ^17.0.39
+    "@types/react-dom": ^17.0.13
     babel-loader: ^8.2.3
     babel-preset-react-app: ^10.0.1
     bn.js: ^5.2.0
@@ -3422,12 +3422,12 @@ __metadata:
     "@emotion/styled": ^11.6.0
     "@reach/dialog": ^0.16.2
     "@react-spring/web": ^9.4.2
-    "@saberhq/solana-contrib": ^1.12.30
-    "@saberhq/use-solana": ^1.12.30
-    "@solana/web3.js": ^1.31.0
+    "@saberhq/solana-contrib": ^1.12.48
+    "@saberhq/use-solana": ^1.12.48
+    "@solana/web3.js": ^1.36.0
     "@types/bn.js": ^5.1.0
-    "@types/react": ^17.0.38
-    "@types/react-dom": ^17.0.11
+    "@types/react": ^17.0.39
+    "@types/react-dom": ^17.0.13
     bn.js: ^5.2.0
     polished: ^4.1.3
     react: ^17.0.2
@@ -3706,15 +3706,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/devices@npm:^6.20.0":
-  version: 6.20.0
-  resolution: "@ledgerhq/devices@npm:6.20.0"
+"@ledgerhq/devices@npm:^6.24.1":
+  version: 6.24.1
+  resolution: "@ledgerhq/devices@npm:6.24.1"
   dependencies:
     "@ledgerhq/errors": ^6.10.0
     "@ledgerhq/logs": ^6.10.0
     rxjs: 6
     semver: ^7.3.5
-  checksum: 67246ffe6d6b95e3ec2f6ce2f02eeb138397911f7018c1055ec8ed103e9790b4f825754e2f0e64f554e90f698fec05e2c80abf2bf3ec3c0eecc490acf4c21ad7
+  checksum: f42bce5c0d3bda8b4f3ccdfcdf576e916f736fbffef3820c742cafd9baa49335a6cdfeed473cb055fb95a6bb2ae37f02753246cf4b9e623dfc2ad39212379f17
   languageName: node
   linkType: hard
 
@@ -3725,26 +3725,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/hw-transport-webusb@npm:^6.20.0":
-  version: 6.20.0
-  resolution: "@ledgerhq/hw-transport-webusb@npm:6.20.0"
+"@ledgerhq/hw-transport-webusb@npm:^6.24.1":
+  version: 6.24.1
+  resolution: "@ledgerhq/hw-transport-webusb@npm:6.24.1"
   dependencies:
-    "@ledgerhq/devices": ^6.20.0
+    "@ledgerhq/devices": ^6.24.1
     "@ledgerhq/errors": ^6.10.0
-    "@ledgerhq/hw-transport": ^6.20.0
+    "@ledgerhq/hw-transport": ^6.24.1
     "@ledgerhq/logs": ^6.10.0
-  checksum: 428544f11aee3e57c0160924e5b1b5d925e27f4090226d1f3a571a8520bf6e85fa8d3eabcec94f3665a05cf14ca08924b8f2273018b5cf2823c3b43fc3c99909
+  checksum: 4c1e671c9ffe8792b7a141fbc873ab630067833891a3fe5222f052b32928fb9b8dfcdb4fa1fe4f9bee3815cf41538da894ee2297b9a7564a6bab8bbc19e0e2e2
   languageName: node
   linkType: hard
 
-"@ledgerhq/hw-transport@npm:^6.20.0":
-  version: 6.20.0
-  resolution: "@ledgerhq/hw-transport@npm:6.20.0"
+"@ledgerhq/hw-transport@npm:^6.24.1":
+  version: 6.24.1
+  resolution: "@ledgerhq/hw-transport@npm:6.24.1"
   dependencies:
-    "@ledgerhq/devices": ^6.20.0
+    "@ledgerhq/devices": ^6.24.1
     "@ledgerhq/errors": ^6.10.0
     events: ^3.3.0
-  checksum: 89ecfeba2b2e179a665325603d74c7aa85042d1268bbb6f0cd023e15510cda468a3f162ba9140134fe1c1f24832765fbe5a99f396caaa67b2a5914ea02ab07c4
+  checksum: 31920d43268f65240fd6e48cdfb94059f676bdf2fd1a63a1a15b4dbd8ece2802e2fbfc6933019c80a2b4f830bf3fc5554065a4c5ee6dd6856084db26426e73e1
   languageName: node
   linkType: hard
 
@@ -4831,6 +4831,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@project-serum/sol-wallet-adapter@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@project-serum/sol-wallet-adapter@npm:0.2.0"
+  dependencies:
+    bs58: ^4.0.1
+    eventemitter3: ^4.0.4
+  peerDependencies:
+    "@solana/web3.js": ^1.5.0
+  checksum: d0cb7089fa45fbc4b5d2dd27290837537c1bd507423227b7802d22c4609fe318c229a9527f49fac11d438381ce7a38b88f55091c9921caa61e1ca1641340812d
+  languageName: node
+  linkType: hard
+
 "@project-serum/sol-wallet-adapter@npm:^0.2.6":
   version: 0.2.6
   resolution: "@project-serum/sol-wallet-adapter@npm:0.2.6"
@@ -5052,9 +5064,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@saberhq/solana-contrib@npm:^1.12.30":
-  version: 1.12.30
-  resolution: "@saberhq/solana-contrib@npm:1.12.30"
+"@saberhq/solana-contrib@npm:^1.12.48":
+  version: 1.12.48
+  resolution: "@saberhq/solana-contrib@npm:1.12.48"
   dependencies:
     "@types/promise-retry": ^1.1.3
     "@types/retry": ^0.12.1
@@ -5065,45 +5077,45 @@ __metadata:
   peerDependencies:
     "@solana/web3.js": ^1.29.2
     bn.js: ^4 || ^5
-  checksum: 952051da5f65de1113cba5ac3b003035db434ee52c59cd7282e45fcbcfd49c26344e466fa345609a2d0fa720a76af7e911ad2a114d90bef614b8184ab79a0f1a
+  checksum: eb09e72c7779b88922e06e87596da8aacadb4f0c799d678c39d997e564a3158802faa16151b7c7191e430b70566eece9ea8295e7f1ca802e51ed9eff81683918
   languageName: node
   linkType: hard
 
-"@saberhq/token-utils@npm:^1.12.30":
-  version: 1.12.30
-  resolution: "@saberhq/token-utils@npm:1.12.30"
+"@saberhq/token-utils@npm:^1.12.48":
+  version: 1.12.48
+  resolution: "@saberhq/token-utils@npm:1.12.48"
   dependencies:
-    "@saberhq/solana-contrib": ^1.12.30
+    "@saberhq/solana-contrib": ^1.12.48
     "@solana/buffer-layout": ^4.0.0
     "@solana/spl-token": ^0.1.8
-    "@ubeswap/token-math": ^4.4.1
+    "@ubeswap/token-math": ^4.4.4
     tiny-invariant: ^1.2.0
     tslib: ^2.3.1
   peerDependencies:
     "@solana/web3.js": ^1.29.2
     bn.js: ^4 || ^5
     jsbi: ^3 || ^4
-  checksum: 539b7dd9ef7e82713587280b66f51f835399efebfef9b129f5049ff560a36ccbe0f14ecd549bcda38bb9c7e3a854534114488a847b989c9c1876d37af85b43a0
+  checksum: eb8385fa762b42f264d2673bc2508a95a72cee2ecf55ab6e06c0c0cdb389d9287dd22e27e60bfb0fec9ba1d0fca802e728ce2ab496ea65bc26510bca8968da46
   languageName: node
   linkType: hard
 
-"@saberhq/use-solana@npm:^1.12.30":
-  version: 1.12.30
-  resolution: "@saberhq/use-solana@npm:1.12.30"
+"@saberhq/use-solana@npm:^1.12.48":
+  version: 1.12.48
+  resolution: "@saberhq/use-solana@npm:1.12.48"
   dependencies:
-    "@ledgerhq/hw-transport": ^6.20.0
-    "@ledgerhq/hw-transport-webusb": ^6.20.0
-    "@saberhq/solana-contrib": ^1.12.30
-    "@solana/wallet-adapter-base": ^0.9.2
-    "@solana/wallet-adapter-clover": ^0.4.2
-    "@solana/wallet-adapter-coin98": ^0.5.2
-    "@solana/wallet-adapter-mathwallet": ^0.9.2
-    "@solana/wallet-adapter-phantom": ^0.9.2
-    "@solana/wallet-adapter-slope": ^0.5.2
-    "@solana/wallet-adapter-solflare": ^0.6.2
-    "@solana/wallet-adapter-sollet": ^0.10.3
-    "@solana/wallet-adapter-solong": ^0.9.2
-    bs58: ^4.0.1
+    "@ledgerhq/hw-transport": ^6.24.1
+    "@ledgerhq/hw-transport-webusb": ^6.24.1
+    "@saberhq/solana-contrib": ^1.12.48
+    "@solana/wallet-adapter-base": ^0.9.4
+    "@solana/wallet-adapter-clover": ^0.4.4
+    "@solana/wallet-adapter-coin98": ^0.5.3
+    "@solana/wallet-adapter-glow": ^0.1.0
+    "@solana/wallet-adapter-mathwallet": ^0.9.3
+    "@solana/wallet-adapter-phantom": ^0.9.3
+    "@solana/wallet-adapter-slope": ^0.5.4
+    "@solana/wallet-adapter-solflare": ^0.6.6
+    "@solana/wallet-adapter-sollet": ^0.11.1
+    "@solana/wallet-adapter-solong": ^0.9.3
     eventemitter3: ^4.0.7
     fast-json-stable-stringify: ^2.1.0
     tiny-invariant: ^1.2.0
@@ -5113,7 +5125,7 @@ __metadata:
     "@solana/web3.js": ^1.29.2
     bn.js: ^4 || ^5
     react: ^17.0.2
-  checksum: d32534f998b231dbf8bb61c5b12700a8e87f52e051848b1040c1657eb9488ea9ddc97a928f4a2584b87b2722523739388416643a95045b58f65e1cd2ab6b7925
+  checksum: 60b5607de29e119929d06aa46f4820caf50ce687cdb240af4e45959a5c62034893fe412d5749d9efac4d7b55f821c34f781eab89de553929608a1d6c5a2f7fe6
   languageName: node
   linkType: hard
 
@@ -5167,102 +5179,111 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-base@npm:^0.9.1, @solana/wallet-adapter-base@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@solana/wallet-adapter-base@npm:0.9.2"
+"@solana/wallet-adapter-base@npm:^0.9.3, @solana/wallet-adapter-base@npm:^0.9.4":
+  version: 0.9.4
+  resolution: "@solana/wallet-adapter-base@npm:0.9.4"
   dependencies:
     "@solana/web3.js": ^1.20.0
     eventemitter3: ^4.0.0
-  checksum: bcc9030736dc3392fa66a10713ad43e89c17850d10bf96a5c7a45f5ba01efdd571e83775b8ac8d5b4567b3b261058626794ffff4cea92e4db31671eb2cf6837e
+  checksum: c31a3530cd6c7192dd37d8aaae264596171a29f59dfd381d0ddeb75c95d8ed5ca495f6ffab97ecf2c35d5e0220ded24267e9877955e6ca729a80cb97c8cbabb3
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-clover@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@solana/wallet-adapter-clover@npm:0.4.2"
+"@solana/wallet-adapter-clover@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "@solana/wallet-adapter-clover@npm:0.4.4"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-  checksum: 598c6429850c71f2de41c92357b2cb2cce3308f078ba99f28a5e3aec616cafa105f15b3701e5ce0098136a957943f9c0d843f1c2118e2b4d394fd66a232993e1
+  checksum: 7c7bab356da29be70a1792779b3f0d96f5288af9e665facc0238beea33a1a18353025e3839c652963569334f0357c19fee9a41038295499d44931cd7a814b3d5
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-coin98@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "@solana/wallet-adapter-coin98@npm:0.5.2"
+"@solana/wallet-adapter-coin98@npm:^0.5.3":
+  version: 0.5.3
+  resolution: "@solana/wallet-adapter-coin98@npm:0.5.3"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-    "@types/bs58": ^4.0.1
     bs58: ^4.0.0
-  checksum: 64e4fe183cd3bedf6d3071536c47f14c0376eadad3ff16d0032902c5e7f7b73725f5442c2ff1f02537029e6dbc67e926200477754b9c8caffe581a23fa364bc9
+  checksum: 2dc5e8e00fefc95620cb52683a5e58fc338f8b77a8d17fcbcd9ce481d3d5d7aab5e3f6c09e758592c334fbaffd77fa4f8758fe5b79478bbadaee129310909da5
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-mathwallet@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@solana/wallet-adapter-mathwallet@npm:0.9.2"
+"@solana/wallet-adapter-glow@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@solana/wallet-adapter-glow@npm:0.1.0"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-  checksum: 1746db8f5472eb512006429559046d8d12383f43dffb28674153da87611f864bbbad0de2d2fc947cb0571b8be7f1df6d0c3ec9a8b4c094dc1c05a52bb2374070
+  checksum: e2b01ce39750302f0d43cea9ec3b2f874ceb58878de0d9d487f92100ea9a1f99b7dfffa8e05675d1a402754fdd44bd21259f492cad2a67d0743721c851c773e5
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-phantom@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@solana/wallet-adapter-phantom@npm:0.9.2"
+"@solana/wallet-adapter-mathwallet@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@solana/wallet-adapter-mathwallet@npm:0.9.3"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-  checksum: c56cc05468e20be6465bb59f191ad0e265095a18e9d6efcb4fd016245a05f8f5296e5124ef3b9ad684d3eb7d691ed955a307cc1e158a4026e7b727800532a4f6
+  checksum: 40701bb4d5181590abcba11a90f3ba5acc05101a2fccae607d3f301bdd62c4eba9f9fc040ad18f3a932049a7b75df541c65ae8154be251e856904549b009ecd3
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-slope@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "@solana/wallet-adapter-slope@npm:0.5.2"
+"@solana/wallet-adapter-phantom@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@solana/wallet-adapter-phantom@npm:0.9.3"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-    "@types/bs58": ^4.0.1
+  checksum: c1926728e8542a5409fe2057d2c3acfa004ead95de86285adb9e8e8a8bf528f71c09841ddef21e52771b6c411c5f8255d763c8a7d7ce64f21bc7025c1de69625
+  languageName: node
+  linkType: hard
+
+"@solana/wallet-adapter-slope@npm:^0.5.4":
+  version: 0.5.4
+  resolution: "@solana/wallet-adapter-slope@npm:0.5.4"
+  dependencies:
+    "@solana/wallet-adapter-base": ^0.9.4
+    "@solana/web3.js": ^1.20.0
     bs58: ^4.0.0
-  checksum: f1c60c12101cf93609e18a6b97f767b4ab7c2d6ec94b4a603a659f4eafd0a13ae1fb4ab2aefdf8c2fc7a65ded0349f32d981df950d5e03b333419f152a7ca0f0
+  checksum: 99453262679679929e90cf2fc0c5d95b66109229814f33c5c66b20dc4b1caa984a3e05604ae369646e695e973a447fcd3759f0e1751681e0ddacd24b1e7818d9
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-solflare@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "@solana/wallet-adapter-solflare@npm:0.6.2"
+"@solana/wallet-adapter-solflare@npm:^0.6.6":
+  version: 0.6.6
+  resolution: "@solana/wallet-adapter-solflare@npm:0.6.6"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.4
     "@solana/web3.js": ^1.20.0
-  checksum: 7118dac7195e0ada72281ca956cad5e82a8e57f5cf285d593453fdcd4319eee6f464c6934d402b1b36a1f27d55600dd7f8666b86c742e3ebb8b041596ff632d3
+    "@solflare-wallet/sdk": ^1.0.11
+  checksum: 4aff1e06e4869927793b32df0a8d82741cf266a7bf21985323630ac8fa564a49d0fa0fda053a8dd4c3c7b08b903f52495a7dd2f7b154279d4bd6cef31726d46a
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-sollet@npm:^0.10.3":
-  version: 0.10.3
-  resolution: "@solana/wallet-adapter-sollet@npm:0.10.3"
+"@solana/wallet-adapter-sollet@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@solana/wallet-adapter-sollet@npm:0.11.1"
   dependencies:
     "@project-serum/sol-wallet-adapter": ^0.2.6
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.4
     "@solana/web3.js": ^1.20.0
-  checksum: d1e524e90bfe34ffa7f9c0f6570d6355bfbea07378ab89f2d8bb5a1cbecc175aee6b4f69c0f113dfd3ddef6ff4d68464af2e771112d7421e26b12f212397afab
+  checksum: dd13dee8847a424f1db0eff392584cb365212782ad8751b0ddd5a01ee0498c0e3cd8be57645b3bc76e0976df44f906a6f073417acc1c7765e64d9471157b13ac
   languageName: node
   linkType: hard
 
-"@solana/wallet-adapter-solong@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@solana/wallet-adapter-solong@npm:0.9.2"
+"@solana/wallet-adapter-solong@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@solana/wallet-adapter-solong@npm:0.9.3"
   dependencies:
-    "@solana/wallet-adapter-base": ^0.9.1
+    "@solana/wallet-adapter-base": ^0.9.3
     "@solana/web3.js": ^1.20.0
-  checksum: 62bb164e032e6b832db8b44d95cbe5f623775ac29beae82480a6cc2ac9a316bdad1a2b76fb3009ab8bccd56669b561e612a51a7034eca3dc22ce2d9e94f37dd2
+  checksum: 400413f46126835a1f97a91ffd5341f738dcab9cabb6cef06703a6b9d5b724c4b198aae3f1c8d5cf30f07292ba0ab690ab2f0bccb6ddd8f966f0b9c7edf9e7da
   languageName: node
   linkType: hard
 
-"@solana/web3.js@npm:^1.20.0, @solana/web3.js@npm:^1.31.0":
+"@solana/web3.js@npm:^1.20.0":
   version: 1.31.0
   resolution: "@solana/web3.js@npm:1.31.0"
   dependencies:
@@ -5303,6 +5324,42 @@ __metadata:
     superstruct: ^0.14.2
     tweetnacl: ^1.0.0
   checksum: 7f428e1c3a6199c73d74da62b4eede9f0e92e57816b61f090f44e84174ae95681a9b8d17c86177bff75e4f073298252edf9aafe98c5d0f893074092d57a94801
+  languageName: node
+  linkType: hard
+
+"@solana/web3.js@npm:^1.36.0":
+  version: 1.36.0
+  resolution: "@solana/web3.js@npm:1.36.0"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    "@ethersproject/sha2": ^5.5.0
+    "@solana/buffer-layout": ^3.0.0
+    bn.js: ^5.0.0
+    borsh: ^0.4.0
+    bs58: ^4.0.1
+    buffer: 6.0.1
+    cross-fetch: ^3.1.4
+    jayson: ^3.4.4
+    js-sha3: ^0.8.0
+    rpc-websockets: ^7.4.2
+    secp256k1: ^4.0.2
+    superstruct: ^0.14.2
+    tweetnacl: ^1.0.0
+  checksum: 316c5752ff884a0c86b9544d2b73528f8d6efd9c4096a1685631aea79aeeb7b049d4f316f25a3c74d11f3c059ba7fa3e2a6344dcb1ec231743460c6da27e4a88
+  languageName: node
+  linkType: hard
+
+"@solflare-wallet/sdk@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "@solflare-wallet/sdk@npm:1.0.11"
+  dependencies:
+    "@project-serum/sol-wallet-adapter": 0.2.0
+    bs58: ^4.0.1
+    eventemitter3: ^4.0.7
+    uuid: ^8.3.2
+  peerDependencies:
+    "@solana/web3.js": ^1.31.0
+  checksum: 9e7bfa96c3712cb502e665acb2139cfa0cdc03a5b15dfc2c6c7bb655f4bad3066c7284e01cca59673f3a3d38384ea62e6d2a274ef9eee28a8a8e96977a43286c
   languageName: node
   linkType: hard
 
@@ -5595,15 +5652,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bs58@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@types/bs58@npm:4.0.1"
-  dependencies:
-    base-x: ^3.0.6
-  checksum: 5063fed6bb3816f28eef3e689a05f8f85d03ce7c2e3ceefe77c349ed147023999eb024e863bf3fa81ba2bded690e5296efe4d34864c875097bd261614e37f786
-  languageName: node
-  linkType: hard
-
 "@types/connect-history-api-fallback@npm:^1.3.5":
   version: 1.3.5
   resolution: "@types/connect-history-api-fallback@npm:1.3.5"
@@ -5751,13 +5799,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.4.0":
-  version: 27.4.0
-  resolution: "@types/jest@npm:27.4.0"
+"@types/jest@npm:^27.4.1":
+  version: 27.4.1
+  resolution: "@types/jest@npm:27.4.1"
   dependencies:
-    jest-diff: ^27.0.0
+    jest-matcher-utils: ^27.0.0
     pretty-format: ^27.0.0
-  checksum: d2350267f954f9a2e4a15e5f02fbf19a77abfb9fd9e57a954de1fb0e9a0d3d5f8d3646ac7d9c42aeb4b4d828d2e70624ec149c85bb50a48634a54eed8429e1f8
+  checksum: 5184f3eef4832d01ee8f59bed15eec45ccc8e29c724a5e6ce37bf74396b37bdf04f557000f45ba4fc38ae6075cf9cfcce3d7a75abc981023c61ceb27230a93e4
   languageName: node
   linkType: hard
 
@@ -5817,10 +5865,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^17.0.8":
-  version: 17.0.8
-  resolution: "@types/node@npm:17.0.8"
-  checksum: f4cadeb9e602027520abc88c77142697e33cf6ac98bb02f8b595a398603cbd33df1f94d01c055c9f13cde0c8eaafc5e396ca72645458d42b4318b845bc7f1d0f
+"@types/node@npm:^17.0.21":
+  version: 17.0.21
+  resolution: "@types/node@npm:17.0.21"
+  checksum: 89dcd2fe82f21d3634266f8384e9c865cf8af49685639fbdbd799bdd1040480fb1e8eeda2d3b9fce41edbe704d2a4be9f427118c4ae872e8d9bb7cbeb3c41a94
   languageName: node
   linkType: hard
 
@@ -5882,12 +5930,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.11":
-  version: 17.0.11
-  resolution: "@types/react-dom@npm:17.0.11"
+"@types/react-dom@npm:^17.0.13":
+  version: 17.0.13
+  resolution: "@types/react-dom@npm:17.0.13"
   dependencies:
     "@types/react": "*"
-  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+  checksum: 62c42a54ac8961c23a0e74b9cdd8b0a78563757e462b1ab665b2aa365bfd8b86a73d3f6eafc09a4a80fb08659321db168f012aa597c41c0df36f645a94e9266b
   languageName: node
   linkType: hard
 
@@ -5902,14 +5950,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.38":
-  version: 17.0.38
-  resolution: "@types/react@npm:17.0.38"
+"@types/react@npm:^17.0.39":
+  version: 17.0.39
+  resolution: "@types/react@npm:17.0.39"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 4079f4f959cd4a4bfaeda8b89fe8a1b1f8bdc9d87acfdc5f74a0b39cec9ec6a470724357c62778c0f063180b360c250e920c5a142f1dbcda67d9cc25a6d43a85
+  checksum: bf04d3c2894559012710d595553e12b422d3b91cd8f4f7e122d8cb044ba9c2ba17f6e8a4e09581359cc5509ddc59cd8c8fabd6774f3505a40a45393f074d6e6e
   languageName: node
   linkType: hard
 
@@ -6229,9 +6277,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ubeswap/token-math@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "@ubeswap/token-math@npm:4.4.1"
+"@ubeswap/token-math@npm:^4.4.4":
+  version: 4.4.4
+  resolution: "@ubeswap/token-math@npm:4.4.4"
   dependencies:
     big.js: ^6.1.1
     decimal.js-light: ^2.5.1
@@ -6241,7 +6289,7 @@ __metadata:
   peerDependencies:
     bn.js: ^5.2.0
     jsbi: ^3 || ^4
-  checksum: a6e0b5af506a6b630ecc1586bd333090ce0dae40a071afdca6274caefd8ada3603fb772cae73c1088ca006acb8444bdbe612565446ce17d98ee4eeb613a83a30
+  checksum: c5ff4b2b09994863277e70ae64e768a251b525868d9723e202215d71e0ffec853d027ff1b735757e0a71b6c8857ad01bfacd4ffc7b80a71d1af42237af9c5e04
   languageName: node
   linkType: hard
 
@@ -7269,15 +7317,6 @@ __metadata:
   dependencies:
     safe-buffer: ^5.0.1
   checksum: 92b95493e636999d6505d9c5abfa049fce1bdde9327f733c5984e712cdb98482d2d45410e4ac1d04e5a004545e46898674f405db04c9555ba3e35fc00b150bf4
-  languageName: node
-  linkType: hard
-
-"base-x@npm:^3.0.6":
-  version: 3.0.9
-  resolution: "base-x@npm:3.0.9"
-  dependencies:
-    safe-buffer: ^5.0.1
-  checksum: 957101d6fd09e1903e846fd8f69fd7e5e3e50254383e61ab667c725866bec54e5ece5ba49ce385128ae48f9ec93a26567d1d5ebb91f4d56ef4a9cc0d5a5481e8
   languageName: node
   linkType: hard
 
@@ -9063,17 +9102,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff-sequences@npm:^27.0.6":
-  version: 27.0.6
-  resolution: "diff-sequences@npm:27.0.6"
-  checksum: f35ad024d426cd1026d6c98a1f604c41966a0e89712b05a38812fc11e645ff0e915ec17bc8f4b6910fed6df0b309b255aa6c7c77728be452c6dbbfa30aa2067b
-  languageName: node
-  linkType: hard
-
 "diff-sequences@npm:^27.4.0":
   version: 27.4.0
   resolution: "diff-sequences@npm:27.4.0"
   checksum: 66d04033e8632eeacdd029b4ecaf87d233d475e4b0cd1cee035eda99e70e1a7f803507d72f2677990ef526f28a2f6e5709af8d94dcdc0682b8884a3a646190a1
+  languageName: node
+  linkType: hard
+
+"diff-sequences@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "diff-sequences@npm:27.5.1"
+  checksum: a00db5554c9da7da225db2d2638d85f8e41124eccbd56cbaefb3b276dcbb1c1c2ad851c32defe2055a54a4806f030656cbf6638105fd6ce97bb87b90b32a33ca
   languageName: node
   linkType: hard
 
@@ -12164,18 +12203,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^27.0.0":
-  version: 27.0.6
-  resolution: "jest-diff@npm:27.0.6"
-  dependencies:
-    chalk: ^4.0.0
-    diff-sequences: ^27.0.6
-    jest-get-type: ^27.0.6
-    pretty-format: ^27.0.6
-  checksum: 387e3cdeb2c069dae7d6344b645d3b35153642a2455eb52a454d4432bc4c132c769616a764cbb4866e6ae036dc5a879717b47c7de4eb0f8ce68081731eb3e8ab
-  languageName: node
-  linkType: hard
-
 "jest-diff@npm:^27.4.2":
   version: 27.4.2
   resolution: "jest-diff@npm:27.4.2"
@@ -12185,6 +12212,18 @@ __metadata:
     jest-get-type: ^27.4.0
     pretty-format: ^27.4.2
   checksum: e5bcdb4f27747795b74a56d56a9545d7fc8f1671a1251d580aea1a7a52df5db044f62ec24f2abc68305f0226d918a443f3b88d9a82f8d0dc4aaa079b621ab091
+  languageName: node
+  linkType: hard
+
+"jest-diff@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "jest-diff@npm:27.5.1"
+  dependencies:
+    chalk: ^4.0.0
+    diff-sequences: ^27.5.1
+    jest-get-type: ^27.5.1
+    pretty-format: ^27.5.1
+  checksum: 8be27c1e1ee57b2bb2bef9c0b233c19621b4c43d53a3c26e2c00a4e805eb4ea11fe1694a06a9fb0e80ffdcfdc0d2b1cb0b85920b3f5c892327ecd1e7bd96b865
   languageName: node
   linkType: hard
 
@@ -12239,17 +12278,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-get-type@npm:^27.0.6":
-  version: 27.0.6
-  resolution: "jest-get-type@npm:27.0.6"
-  checksum: 2d4c1381bb5ddb212d80ad00497c7cbb3312358e10b62ac19f1fe5a28ae4af709202bfc235b77ec508970b83fd89945937652d636bcaf88614fa00028a6f3138
-  languageName: node
-  linkType: hard
-
 "jest-get-type@npm:^27.4.0":
   version: 27.4.0
   resolution: "jest-get-type@npm:27.4.0"
   checksum: bb9b70e420009fdaed3026d5bccd01569f92c7500f9f544d862796d4f4efa93ced5484864b2f272c7748bfb5bfd3268d48868b169c51ab45fe5b45b9519b6e46
+  languageName: node
+  linkType: hard
+
+"jest-get-type@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "jest-get-type@npm:27.5.1"
+  checksum: 63064ab70195c21007d897c1157bf88ff94a790824a10f8c890392e7d17eda9c3900513cb291ca1c8d5722cad79169764e9a1279f7c8a9c4cd6e9109ff04bbc0
   languageName: node
   linkType: hard
 
@@ -12310,6 +12349,18 @@ __metadata:
     jest-get-type: ^27.4.0
     pretty-format: ^27.4.2
   checksum: 093ef57aa6f5563ed5e2c0bce31f8d2ac65438c5d917457dd9a392bf11956a976b55ef2b536cf593b1d65283430305cb6d26e97b064a5c140146346103e74184
+  languageName: node
+  linkType: hard
+
+"jest-matcher-utils@npm:^27.0.0":
+  version: 27.5.1
+  resolution: "jest-matcher-utils@npm:27.5.1"
+  dependencies:
+    chalk: ^4.0.0
+    jest-diff: ^27.5.1
+    jest-get-type: ^27.5.1
+    pretty-format: ^27.5.1
+  checksum: bb2135fc48889ff3fe73888f6cc7168ddab9de28b51b3148f820c89fdfd2effdcad005f18be67d0b9be80eda208ad47290f62f03d0a33f848db2dd0273c8217a
   languageName: node
   linkType: hard
 
@@ -15725,7 +15776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^27.0.0, pretty-format@npm:^27.0.6":
+"pretty-format@npm:^27.0.0":
   version: 27.0.6
   resolution: "pretty-format@npm:27.0.6"
   dependencies:
@@ -15746,6 +15797,17 @@ __metadata:
     ansi-styles: ^5.0.0
     react-is: ^17.0.1
   checksum: 0daaf00c4dcb35493e57d30147e8045d0c45cb47fc4c94e3ab1892401abe939627c39975c77cc81eb2581aaa5b12bf23ef669fa550bec68b396fb79dd8c10afa
+  languageName: node
+  linkType: hard
+
+"pretty-format@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "pretty-format@npm:27.5.1"
+  dependencies:
+    ansi-regex: ^5.0.1
+    ansi-styles: ^5.0.0
+    react-is: ^17.0.1
+  checksum: cf610cffcb793885d16f184a62162f2dd0df31642d9a18edf4ca298e909a8fe80bdbf556d5c9573992c102ce8bf948691da91bf9739bee0ffb6e79c8a8a6e088
   languageName: node
   linkType: hard
 
@@ -18766,7 +18828,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"uuid@npm:^8.3.0":
+"uuid@npm:^8.3.0, uuid@npm:^8.3.2":
   version: 8.3.2
   resolution: "uuid@npm:8.3.2"
   bin:

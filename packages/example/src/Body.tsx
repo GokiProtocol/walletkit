@@ -74,8 +74,8 @@ export const Body: React.FC = () => {
           <Buttons>
             <Button onClick={disconnect}>Disconnect</Button>
             <Button
-              onClick={() => {
-                setNetwork("devnet");
+              onClick={async () => {
+                await setNetwork("devnet");
               }}
             >
               Switch to Devnet
