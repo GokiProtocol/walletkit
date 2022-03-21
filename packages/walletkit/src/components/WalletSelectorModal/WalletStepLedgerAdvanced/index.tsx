@@ -56,6 +56,7 @@ export const WalletStepLedgerAdvanced: React.FC<Props> = ({
         />
       </Fields>
       <ButtonWithFooter
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onClick={async () => {
           try {
             const account =
