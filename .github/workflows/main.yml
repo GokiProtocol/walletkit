@@ -13,10 +13,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Use Node 14.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
+      - uses: actions/setup-node@v3
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
