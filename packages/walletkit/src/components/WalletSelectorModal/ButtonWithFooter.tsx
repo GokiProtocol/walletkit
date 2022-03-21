@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { lighten } from "polished";
+import lighten from "polished/lib/color/lighten";
 
 interface Props
   extends React.DetailedHTMLProps<
