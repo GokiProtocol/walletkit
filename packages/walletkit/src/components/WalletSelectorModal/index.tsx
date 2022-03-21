@@ -92,6 +92,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.Select && (
         <WalletStepSelect
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onSelect={async (info) => {
             // Allow the wallet to disconnect before attempting to reconnect.
             await disconnect();

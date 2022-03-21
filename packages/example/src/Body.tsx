@@ -72,16 +72,17 @@ export const Body: React.FC = () => {
             </li>
           </ul>
           <Buttons>
-            <Button onClick={disconnect}>Disconnect</Button>
+            <Button onClick={() => void disconnect()}>Disconnect</Button>
             <Button
-              onClick={async () => {
-                await setNetwork("devnet");
+              onClick={() => {
+                void setNetwork("devnet");
               }}
             >
               Switch to Devnet
             </Button>
             <Button
               disabled={!providerMut}
+              // eslint-disable-next-line @typescript-eslint/no-misused-promises
               onClick={async () => {
                 invariant(providerMut, "providerMut");
                 const txSig = await providerMut.connection.requestAirdrop(
@@ -99,6 +100,7 @@ export const Body: React.FC = () => {
             </Button>
             <Button
               disabled={!providerMut}
+              // eslint-disable-next-line @typescript-eslint/no-misused-promises
               onClick={async () => {
                 invariant(providerMut, "providerMut");
                 const tx = await createInitMintInstructions({

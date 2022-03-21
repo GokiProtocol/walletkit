@@ -84,11 +84,11 @@ export const Modal: React.FC<ModalProps> = ({
         `}
       />
       {fadeTransition(
-        (props, item) =>
+        (styles, item) =>
           item && (
             <StyledDialogOverlay
-              style={props}
-              isOpen={isOpen || props.opacity.get() !== 0}
+              style={styles}
+              isOpen={isOpen || styles.opacity.get() !== 0}
               onDismiss={onDismiss}
               darkenOverlay={darkenOverlay}
             >
