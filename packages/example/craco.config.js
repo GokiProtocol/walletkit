@@ -16,9 +16,15 @@ module.exports = {
   typescript: { enableTypeChecking: false },
   webpack: {
     configure: (config) => {
+      config.resolve.fallback = {...config.resolve.fallback,...{
+          process: require.resolve("process/browser"),
+          stream: require.resolve("stream-browserify"),
+        } };
+
       config.plugins.unshift(
         new webpack.ProvidePlugin({
           Buffer: ["buffer", "Buffer"],
+          process: "process/browser",
         })
       );
 
@@ -38,6 +44,7 @@ module.exports = {
           !file.includes("@ledgerhq/devices") &&
           !file.includes("@saberhq/use-solana"),
       });
+      console.log("CONFIG", config)
       return config;
     },
   },
