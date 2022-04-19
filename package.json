@@ -43,5 +43,8 @@
     "@react-spring/core": {
       "built": false
     }
+  },
+  "dependencies": {
+    "@react-spring/web": "9.4.5-beta.1"
   }
 }

@@ -3551,6 +3551,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.17.9
     "@babel/plugin-proposal-private-property-in-object": ^7.16.7
+    "@react-spring/web": 9.4.5-beta.1
     "@rushstack/eslint-patch": ^1.1.3
     "@saberhq/eslint-config": ^1.12.62
     "@saberhq/eslint-config-react": ^1.12.62
@@ -5093,6 +5094,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-spring/animated@npm:~9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/animated@npm:9.4.5-beta.1"
+  dependencies:
+    "@react-spring/shared": ~9.4.5-beta.1
+    "@react-spring/types": ~9.4.5-beta.1
+  peerDependencies:
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: c442fd1b3ef6f8f3110add7701fddb53de351548c25156ffa8fe55aa0585195b2368afde8770f2c160cefe3ea3824239f909a13c2766a1726ea733954947a9d7
+  languageName: node
+  linkType: hard
+
 "@react-spring/core@npm:~9.4.4":
   version: 9.4.4
   resolution: "@react-spring/core@npm:9.4.4"
@@ -5107,10 +5120,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-spring/core@npm:~9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/core@npm:9.4.5-beta.1"
+  dependencies:
+    "@react-spring/animated": ~9.4.5-beta.1
+    "@react-spring/rafz": ~9.4.5-beta.1
+    "@react-spring/shared": ~9.4.5-beta.1
+    "@react-spring/types": ~9.4.5-beta.1
+  peerDependencies:
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: 028e84fad83ed503b202222d4dd7c60e25d3cc9e2d6a44e91c764f0f6dce3265687b35fe366e5b5fc9148468563ae8bae52933fbe494a729d1b447505727f075
+  languageName: node
+  linkType: hard
+
 "@react-spring/rafz@npm:~9.4.4":
   version: 9.4.4
   resolution: "@react-spring/rafz@npm:9.4.4"
   checksum: 5019d984509071b8e92d41f6e29455d141d957ce7e40eb11b55859a13425fe70fad448738d400a669cd62005c451b1f83740e0ff64084331e098e377e8e844aa
+  languageName: node
+  linkType: hard
+
+"@react-spring/rafz@npm:~9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/rafz@npm:9.4.5-beta.1"
+  checksum: a6007ed7f9a7169722fd10db7b20ca468ab6e3ef89057b14d421665806983b51b8016fbe971a0ff0cbfd5cae5f4b2e76790dafdf90c1e5fb355cb0f484294c29
   languageName: node
   linkType: hard
 
@@ -5126,10 +5160,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-spring/shared@npm:~9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/shared@npm:9.4.5-beta.1"
+  dependencies:
+    "@react-spring/rafz": ~9.4.5-beta.1
+    "@react-spring/types": ~9.4.5-beta.1
+  peerDependencies:
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: e3cc8c447f886e948f4e9c2c48f39543d2653876d8eb94e393f782abe103f4c0c3d1a17a6307545c638b1a5ddd0acf8c86dfb3adb26aa50bd0691b903e878164
+  languageName: node
+  linkType: hard
+
 "@react-spring/types@npm:~9.4.4":
   version: 9.4.4
   resolution: "@react-spring/types@npm:9.4.4"
   checksum: 67588de3410857e27e2300f7c28c45dbaf602a2328483e50ecf56a46776e455d2c5cbfcf1bbb555ad2fa796830ea6c01f1d2ec52bdc995119ec38bf98b9a2958
+  languageName: node
+  linkType: hard
+
+"@react-spring/types@npm:~9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/types@npm:9.4.5-beta.1"
+  checksum: 83eb580b677e888dfd209ec5740ff5f121e00e67481a94bbf6a073d0833ba207bb62bc46a43c783c823af7b3cc59efe4049052638a1e24191ed18ee16b6c1069
+  languageName: node
+  linkType: hard
+
+"@react-spring/web@npm:9.4.5-beta.1":
+  version: 9.4.5-beta.1
+  resolution: "@react-spring/web@npm:9.4.5-beta.1"
+  dependencies:
+    "@react-spring/animated": ~9.4.5-beta.1
+    "@react-spring/core": ~9.4.5-beta.1
+    "@react-spring/shared": ~9.4.5-beta.1
+    "@react-spring/types": ~9.4.5-beta.1
+  peerDependencies:
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+    react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: 453f800a8c9de703337e1358af4297cf61dd4816c34e5fc478e0397712f07b8017a6a090df2adeb0122838d212e40129bcae56dbd4f23fded095c46275be50b4
   languageName: node
   linkType: hard
 
