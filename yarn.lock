@@ -3579,7 +3579,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
-    "@reach/dialog": ^0.16.2
+    "@reach/dialog": ^0.17.0
     "@react-spring/web": ^9.4.4
     "@saberhq/solana-contrib": ^1.12.67
     "@saberhq/use-solana": ^1.12.67
@@ -3597,6 +3597,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": ^11
     "@emotion/styled": ^11
+    "@reach/dialog": ^0.16.2 || ^0.17
     "@saberhq/solana-contrib": ^1.12.4
     "@saberhq/use-solana": ^1.12.4
     bn.js: ^4 || ^5
@@ -5037,12 +5038,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/dialog@npm:^0.16.2":
-  version: 0.16.2
-  resolution: "@reach/dialog@npm:0.16.2"
+"@reach/dialog@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@reach/dialog@npm:0.17.0"
   dependencies:
-    "@reach/portal": 0.16.2
-    "@reach/utils": 0.16.0
+    "@reach/portal": 0.17.0
+    "@reach/utils": 0.17.0
     prop-types: ^15.7.2
     react-focus-lock: ^2.5.2
     react-remove-scroll: ^2.4.3
@@ -5050,34 +5051,34 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 1478ad3c4c0a86c30b02f4360fb06ead5b2e894c5e6ab96523970d45272298e2e31cb5278f861e4f92a90bcab0a30f4bac5572ab534f56529145619e7675497f
+  checksum: 720abec5376d8e8034b3ebbfbb98273cf00e46e72cb387e56bf966d1d230ad13ad2d37363d406c52a5af745cea51069987ab60142a5828b85297d128a9ec01c1
   languageName: node
   linkType: hard
 
-"@reach/portal@npm:0.16.2":
-  version: 0.16.2
-  resolution: "@reach/portal@npm:0.16.2"
+"@reach/portal@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@reach/portal@npm:0.17.0"
   dependencies:
-    "@reach/utils": 0.16.0
+    "@reach/utils": 0.17.0
     tiny-warning: ^1.0.3
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 7413dcd169cfb9854dd0d3a01f811ec19ef170558fcbd00118d676fc02c197d1c0bce1d1357508879d4775169561d103e13a8e4d74cc677eb0037cc7b04f7a1e
+  checksum: 2e5874cdfd021304d28b527a00d95da84ca98453a5211f816e26b974c2bd1b9837855989f8ab10eeeecfa384b34e21afab43f81dea784aca079aab94bf3f4755
   languageName: node
   linkType: hard
 
-"@reach/utils@npm:0.16.0":
-  version: 0.16.0
-  resolution: "@reach/utils@npm:0.16.0"
+"@reach/utils@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@reach/utils@npm:0.17.0"
   dependencies:
     tiny-warning: ^1.0.3
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 36bc0eb41a71798eb6186b23de265ba709e51dae5bf214fb8505c66bb3f2e6a41bb2401457350436ba89ca9e3a50f93a04fe7c33d15648ce11e568a85622d770
+  checksum: b9ee31b5d07e7f204f3605be3fa45448c9817937a3364d894054c57de9113d417014019d21ad895aebf848a43c20988924d069ba926c0cb20d6f2e8654d7a11e
   languageName: node
   linkType: hard
 
