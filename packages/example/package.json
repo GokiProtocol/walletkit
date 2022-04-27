@@ -1,6 +1,6 @@
 {
   "name": "@gokiprotocol/example",
-  "version": "1.6.7",
+  "version": "1.6.9",
   "private": true,
   "license": "GPL-3.0",
   "dependencies": {
