@@ -34,6 +34,7 @@
     "build": "lerna run build",
     "lint": "eslint --cache .",
     "lint:ci": "eslint --cache . --max-warnings=0",
+    "typecheck": "tsc",
     "prepare": "husky install"
   },
   "lint-staged": {

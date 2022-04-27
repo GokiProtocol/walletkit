@@ -25,6 +25,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-modules-
       - run: yarn install
+      - run: yarn typecheck
       - run: yarn build
       - run: yarn lint:ci
       - run: yarn doctor
