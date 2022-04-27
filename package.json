@@ -39,13 +39,5 @@
     "*.{ts,tsx}": "eslint --cache --fix",
     "*.{js,json,jsx,html,css,md,yml,yaml}": "prettier --write"
   },
-  "packageManager": "yarn@3.2.0",
-  "dependenciesMeta": {
-    "@react-spring/core": {
-      "built": false
-    }
-  },
-  "dependencies": {
-    "@react-spring/web": "9.4.5-beta.1"
-  }
+  "packageManager": "yarn@4.0.0-rc.3"
 }
