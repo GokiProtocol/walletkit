@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import lighten from "polished/lib/color/lighten";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -65,10 +64,10 @@ export const BigButton = styled.button`
   background: #000000;
   color: #fff;
   &:hover {
-    background: ${lighten(0.133, "#000")};
+    background: #212121;
   }
   &:active {
-    background: ${lighten(0.212, "#000")};
+    background: #363636;
   }
   cursor: pointer;
 `;

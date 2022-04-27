@@ -2,7 +2,6 @@ import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { animated, useSpring, useTransition } from "@react-spring/web";
-import darken from "polished/lib/color/darken";
 import React from "react";
 import { isMobile } from "react-device-detect";
 import { useGesture } from "react-use-gesture";
@@ -174,7 +173,7 @@ const ButtonIcon = styled.a`
   flex: 0 0 24px;
   color: #ccd2e3;
   &:hover {
-    color: ${darken(0.1, "#ccd2e3")};
+    color: #adb6d2;
   }
   transition: 0.1s ease;
 `;

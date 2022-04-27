@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import lighten from "polished/lib/color/lighten";
 
 import { useWalletKit } from "../../WalletKitProvider";
 
@@ -91,14 +90,14 @@ const Button = styled.button<{
           background: #70ed9d;
           color: #000;
           &:hover {
-            background: ${lighten(0.1, "#70ed9d")};
+            background: #9bf3bb;
           }
         `
       : css`
           background: #000;
           color: #fff;
           &:hover {
-            background: ${lighten(0.1, "#000")};
+            background: #1a1a1a;
           }
         `}
 
