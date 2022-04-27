@@ -1,15 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsxImportSource": "@emotion/react",
-    "jsx": "react-jsx",
-
     "noEmit": false,
-    "importHelpers": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-    "inlineSources": true,
     "outDir": "dist/cjs/"
   },
   "include": ["src/"]
