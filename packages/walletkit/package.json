@@ -31,7 +31,6 @@
     "react-dom": "^18.1.0"
   },
   "dependencies": {
-    "@reach/dialog": "^0.17.0",
     "@react-spring/web": "^9.4.4",
     "@types/bn.js": "^5.1.0",
     "@types/react": "^18.0.8",
