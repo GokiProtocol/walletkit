@@ -3775,6 +3775,7 @@ __metadata:
     "@reach/dialog": "npm:^0.17.0"
     "@react-spring/web": "npm:^9.4.5"
     "@saberhq/solana-contrib": "npm:^1.13.19"
+    "@saberhq/tsconfig": "npm:^1.13.19"
     "@saberhq/use-solana": "npm:^1.13.19"
     "@solana/web3.js": "npm:^1.43.2"
     "@types/react": "npm:^18.0.9"
