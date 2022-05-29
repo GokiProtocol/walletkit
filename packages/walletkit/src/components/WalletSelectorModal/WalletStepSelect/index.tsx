@@ -100,10 +100,11 @@ export const WalletStepSelect: React.FC<Props> = ({
                 : prov.mustInstall || !prov.info.isInstalled
             )
             .map((fullInfo) => {
-              const { info: provider } = fullInfo;
+              const { info: provider, type } = fullInfo;
               return (
                 <WalletProviderOption
                   key={provider.url}
+                  type={type}
                   info={provider}
                   onSelect={() => {
                     onSelect?.(fullInfo);

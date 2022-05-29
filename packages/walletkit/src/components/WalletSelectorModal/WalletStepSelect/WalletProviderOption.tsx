@@ -1,8 +1,12 @@
 import styled from "@emotion/styled";
-import type { WalletProviderInfo } from "@saberhq/use-solana";
+import type {
+  DefaultWalletType,
+  WalletProviderInfo,
+} from "@saberhq/use-solana";
 import React, { useMemo } from "react";
 
 interface Props {
+  type: DefaultWalletType;
   info: WalletProviderInfo;
 
   onInstall?: (info: WalletProviderInfo) => void;
@@ -10,6 +14,7 @@ interface Props {
 }
 
 export const WalletProviderOption: React.FC<Props> = ({
+  type,
   info,
   onInstall,
   onSelect,
@@ -37,6 +42,7 @@ export const WalletProviderOption: React.FC<Props> = ({
 
   return (
     <Wrapper
+      id={`gokiWalletKitProviderOption-${type}`}
       role="button"
       onClick={(e) => {
         e.stopPropagation();
