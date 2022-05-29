@@ -3712,7 +3712,7 @@ __metadata:
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/react": "npm:^11.9.0"
     "@emotion/styled": "npm:^11.8.1"
-    "@gokiprotocol/walletkit": "npm:^1.7.1"
+    "@gokiprotocol/walletkit": "npm:^1.7.3"
     "@reach/dialog": "npm:^0.17.0"
     "@saberhq/solana-contrib": "npm:^1.13.19"
     "@saberhq/token-utils": "npm:^1.13.19"
@@ -3766,7 +3766,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gokiprotocol/walletkit@npm:^1.7.1, @gokiprotocol/walletkit@workspace:packages/walletkit":
+"@gokiprotocol/walletkit@npm:^1.7.3, @gokiprotocol/walletkit@workspace:packages/walletkit":
   version: 0.0.0-use.local
   resolution: "@gokiprotocol/walletkit@workspace:packages/walletkit"
   dependencies:
