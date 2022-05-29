@@ -3731,6 +3731,7 @@ __metadata:
     jsbi: "npm:^4.3.0"
     polished: "npm:^4.2.2"
     react: "npm:^18.1.0"
+    react-dev-utils: "npm:^12.0.1"
     react-dom: "npm:^18.1.0"
     react-scripts: "npm:5.0.1"
     tiny-invariant: "npm:^1.2.0"
@@ -9084,28 +9085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001251":
-  version: 1.0.30001252
-  resolution: "caniuse-lite@npm:1.0.30001252"
-  checksum: 01a27bbbb2d6651f84845792677e4f6b23a9abda58885eddf2c826d83c8a6d093b272c9a2a4b3fc9c59d9f31a79292b14bd6da3915bc924fc04483d1d0cb7daa
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001272, caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001291":
-  version: 1.0.30001294
-  resolution: "caniuse-lite@npm:1.0.30001294"
-  checksum: 8e4e4dd2abd48bda5b13ca32e3326ec95d00a03b17cbfd8b41ec49abe170006a6a0cfdc3aba2257ccab745054e717d0443db1a43d537e14d6fbdeba98d45e0e9
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001280":
-  version: 1.0.30001282
-  resolution: "caniuse-lite@npm:1.0.30001282"
-  checksum: ad726093371677e4415c5ec527c6ac5da80da0dfb85b9bc4229998ffcfecb8c75668bc62bbfe261c71c9d37eb29a7204373f00efbe8ccdd8ce012353919974bb
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001332":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001251, caniuse-lite@npm:^1.0.30001272, caniuse-lite@npm:^1.0.30001280, caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001291, caniuse-lite@npm:^1.0.30001332":
   version: 1.0.30001344
   resolution: "caniuse-lite@npm:1.0.30001344"
   checksum: 0144ec3e40a06ce363cf3cc4e69fe2520b91b828a280b4b258254e1b3e34c6bd0aec1c0bfd7e208e76f6d5c91707e7ee554d025cf2f24785d9b32f5557c16de0

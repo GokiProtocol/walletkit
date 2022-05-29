@@ -16,6 +16,7 @@ module.exports = {
   typescript: { enableTypeChecking: false },
   webpack: {
     configure: (config) => {
+      config.ignoreWarnings = [/Failed to parse source map/];
       config.plugins.unshift(
         new webpack.ProvidePlugin({
           Buffer: ["buffer", "Buffer"],

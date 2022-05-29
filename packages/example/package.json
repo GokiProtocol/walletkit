@@ -52,8 +52,12 @@
     "@types/react-dom": "18.0.5",
     "babel-loader": "^8.2.5",
     "babel-preset-react-app": "^10.0.1",
+    "react-dev-utils": "^12.0.1",
     "typescript": "^4.7.2",
     "webpack": "^5.72.1"
+  },
+  "resolutions": {
+    "@solana/buffer-layout": "^4"
   },
   "repository": "git@github.com:GokiProtocol/walletkit.git"
 }

@@ -26,4 +26,8 @@ export interface WalletKitArgs {
    * Called when an error occurs.
    */
   onWalletKitError?: (err: Error) => void;
+  /**
+   * Whether or not to display the debug and secret key wallets in the list.
+   */
+  debugMode?: boolean;
 }

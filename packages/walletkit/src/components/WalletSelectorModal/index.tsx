@@ -32,6 +32,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
   app,
   onWalletKitError = defaultOnWalletKitError,
   initialStep = ModalStep.Intro,
+  debugMode,
   ...modalProps
 }: Props) => {
   const appIcon = useMemo(() => app.icon ?? <DefaultAppIcon />, [app.icon]);
@@ -92,6 +93,7 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.Select && (
         <WalletStepSelect
+          debugMode={debugMode}
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onSelect={async (info) => {
             // Allow the wallet to disconnect before attempting to reconnect.

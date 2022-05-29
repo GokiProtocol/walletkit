@@ -15,7 +15,7 @@ export interface ProviderInfo {
   mustInstall: boolean;
 }
 
-const getWalletProviders = (): readonly ProviderInfo[] => {
+const getWalletProviders = (debugMode = false): readonly ProviderInfo[] => {
   const base = (
     Object.entries(DEFAULT_WALLET_PROVIDERS) as readonly [
       DefaultWalletType,
@@ -49,8 +49,12 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
         ),
       })
     )
-    // no secret key for now
-    .filter((p) => p.type !== DefaultWalletType.SecretKey);
+    .filter((p) =>
+      debugMode
+        ? true
+        : p.type !== DefaultWalletType.SecretKey &&
+          p.type !== DefaultWalletType.ReadOnly
+    );
   return [
     ...base,
     {
@@ -69,11 +73,13 @@ const getWalletProviders = (): readonly ProviderInfo[] => {
 interface Props {
   onSelect?: (info: ProviderInfo) => void;
   onInstall?: (info: WalletProviderInfo) => void;
+  debugMode?: boolean;
 }
 
 export const WalletStepSelect: React.FC<Props> = ({
   onSelect,
   onInstall,
+  debugMode,
 }: Props) => {
   const [showUninstalled, setShowUninstalled] = useState<boolean>(false);
   const [providerInfo, setProviderInfo] = useState<readonly ProviderInfo[]>(
@@ -83,10 +89,10 @@ export const WalletStepSelect: React.FC<Props> = ({
   useEffect(() => {
     // wait a second for everything to load
     const timeout = setTimeout(() => {
-      setProviderInfo(getWalletProviders());
+      setProviderInfo(getWalletProviders(debugMode));
     }, 1_000);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [debugMode]);
 
   return (
     <>

@@ -24,6 +24,7 @@ export const WalletKitProvider: React.FC<Props> = ({
   children,
   app,
   initialStep = ModalStep.Intro,
+  debugMode = false,
   ...solanaProviderArgs
 }: Props) => {
   const [showWalletSelector, setShowWalletSelector] = useState<boolean>(false);
@@ -40,6 +41,7 @@ export const WalletKitProvider: React.FC<Props> = ({
           initialStep={initialStep}
           isOpen={showWalletSelector}
           onDismiss={() => setShowWalletSelector(false)}
+          debugMode={debugMode}
         />
         {children}
       </WalletKitContext.Provider>
