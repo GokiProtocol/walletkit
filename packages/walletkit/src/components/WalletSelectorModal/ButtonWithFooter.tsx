@@ -69,5 +69,10 @@ export const BigButton = styled.button`
   &:active {
     background: #363636;
   }
+  transition: 0.2s ease;
   cursor: pointer;
+  &:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
 `;

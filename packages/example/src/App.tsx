@@ -27,7 +27,7 @@ const App: React.FC = () => {
           />
         ),
       }}
-      debugMode={false} // you may want to set this in REACT_APP_DEBUG_MODE
+      debugMode={true} // you may want to set this in REACT_APP_DEBUG_MODE
     >
       <Body />
     </WalletKitProvider>

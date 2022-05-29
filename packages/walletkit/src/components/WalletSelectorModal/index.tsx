@@ -11,6 +11,7 @@ import { WalletStepIntro } from "./WalletStepIntro";
 import { DefaultAppIcon } from "./WalletStepIntro/DefaultAppIcon";
 import { WalletStepLedgerAdvanced } from "./WalletStepLedgerAdvanced";
 import { WalletStepRedirect } from "./WalletStepRedirect";
+import { WalletStepSecretKey } from "./WalletStepSecretKey";
 import type { ProviderInfo } from "./WalletStepSelect";
 import { WalletStepSelect } from "./WalletStepSelect";
 
@@ -22,6 +23,7 @@ export enum ModalStep {
   Redirect = "redirect",
   Connecting = "connecting",
   LedgerAdvanced = "ledger-advanced",
+  SecretKey = "secret-key",
 }
 
 const defaultOnWalletKitError = (err: Error) => {
@@ -71,11 +73,8 @@ export const WalletSelectorModal: React.FC<Props> = ({
                   setStep(ModalStep.Intro);
                   break;
                 case ModalStep.Redirect:
-                  setStep(ModalStep.Select);
-                  break;
                 case ModalStep.Connecting:
-                  setStep(ModalStep.Select);
-                  break;
+                case ModalStep.SecretKey:
                 case ModalStep.LedgerAdvanced:
                   setStep(ModalStep.Select);
                   break;
@@ -104,6 +103,10 @@ export const WalletSelectorModal: React.FC<Props> = ({
               info.info.name === "Ledger (advanced)"
             ) {
               setStep(ModalStep.LedgerAdvanced);
+              return;
+            }
+            if (info.type === DefaultWalletType.SecretKey) {
+              setStep(ModalStep.SecretKey);
               return;
             }
 
@@ -139,6 +142,15 @@ export const WalletSelectorModal: React.FC<Props> = ({
       )}
       {step === ModalStep.LedgerAdvanced && (
         <WalletStepLedgerAdvanced
+          onBack={() => {
+            setStep(ModalStep.Select);
+          }}
+          onError={onWalletKitError}
+          onSuccess={onDismiss}
+        />
+      )}
+      {step === ModalStep.SecretKey && (
+        <WalletStepSecretKey
           onBack={() => {
             setStep(ModalStep.Select);
           }}

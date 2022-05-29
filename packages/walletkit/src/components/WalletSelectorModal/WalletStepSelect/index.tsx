@@ -42,11 +42,14 @@ const getWalletProviders = (debugMode = false): readonly ProviderInfo[] => {
       ([walletType, info]): ProviderInfo => ({
         type: walletType,
         info,
-        mustInstall: !!(
-          typeof window !== "undefined" &&
-          info.isInstalled &&
-          info.isInstalled()
-        ),
+        mustInstall:
+          walletType === DefaultWalletType.ReadOnly
+            ? !debugMode
+            : !!(
+                typeof window !== "undefined" &&
+                info.isInstalled &&
+                info.isInstalled()
+              ),
       })
     )
     .filter((p) =>
