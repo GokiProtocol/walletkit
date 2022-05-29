@@ -53,6 +53,7 @@ export const WalletStepIntro: React.FC<Props> = ({
         />
       </DetailsWrapper>
       <ButtonWithFooter
+        id="walletKit_intro_continue"
         onClick={onContinue}
         footer={
           <>

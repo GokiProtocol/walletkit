@@ -86,6 +86,7 @@ export const WalletStepSecretKey: React.FC<Props> = ({
         </p>
       )}
       <ButtonWithFooter
+        id="walletKit_secretKey_continue"
         disabled={!keypair}
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onClick={async () => {
