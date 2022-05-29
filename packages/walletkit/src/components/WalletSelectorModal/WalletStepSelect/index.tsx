@@ -86,7 +86,7 @@ export const WalletStepSelect: React.FC<Props> = ({
 }: Props) => {
   const [showUninstalled, setShowUninstalled] = useState<boolean>(false);
   const [providerInfo, setProviderInfo] = useState<readonly ProviderInfo[]>(
-    getWalletProviders()
+    getWalletProviders(debugMode)
   );
 
   useEffect(() => {
