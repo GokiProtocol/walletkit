@@ -1,13 +1,13 @@
 {
   "name": "@gokiprotocol/example",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": true,
   "license": "GPL-3.0",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@gokiprotocol/walletkit": "^1.7.0",
+    "@gokiprotocol/walletkit": "^1.7.1",
     "@reach/dialog": "^0.17.0",
     "@saberhq/solana-contrib": "^1.13.19",
     "@saberhq/token-utils": "^1.13.19",
