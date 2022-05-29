@@ -3785,6 +3785,7 @@ __metadata:
     react-dom: "npm:^18.1.0"
     react-use-gesture: "npm:^9.1.3"
     tslib: "npm:^2.4.0"
+    typescript: "npm:^4.7.2"
   peerDependencies:
     "@emotion/react": ^11
     "@emotion/styled": ^11

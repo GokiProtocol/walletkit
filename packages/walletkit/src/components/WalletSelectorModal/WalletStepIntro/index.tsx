@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 import { ButtonWithFooter } from "../ButtonWithFooter";
@@ -21,7 +22,19 @@ export const WalletStepIntro: React.FC<Props> = ({
         <AppIcons>
           <SolanaIcon />
           <ConnectDots />
-          {appIcon}
+          <div
+            css={css`
+              width: 48px;
+              height: 48px;
+              & > img,
+              & > svg {
+                width: 100%;
+                height: 100%;
+              }
+            `}
+          >
+            {appIcon}
+          </div>
         </AppIcons>
       </AppIconsWrapper>
       <Instruction>

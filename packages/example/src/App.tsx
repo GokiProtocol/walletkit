@@ -1,4 +1,3 @@
-import { css } from "@emotion/react";
 import { WalletKitProvider } from "@gokiprotocol/walletkit";
 
 import { Body } from "./Body";
@@ -23,10 +22,6 @@ const App: React.FC = () => {
         name: "My App",
         icon: (
           <img
-            css={css`
-              width: 48px;
-              height: 48px;
-            `}
             src="https://goki.so/assets/android-chrome-256x256.png"
             alt="icon"
           />
