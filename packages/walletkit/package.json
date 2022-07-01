@@ -23,7 +23,7 @@
     "@emotion/styled": "^11.8.1",
     "@reach/dialog": "^0.17.0",
     "@saberhq/solana-contrib": "^1.13.19",
-    "@saberhq/tsconfig": "^1.13.19",
+    "@saberhq/tsconfig": "^2.0.1",
     "@saberhq/use-solana": "^1.13.19",
     "@solana/web3.js": "^1.43.2",
     "@types/react-dom": "18.0.5",
