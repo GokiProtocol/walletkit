@@ -11,7 +11,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
     "@rushstack/eslint-patch": "^1.1.3",
     "@saberhq/eslint-config": "^1.13.19",
-    "@saberhq/eslint-config-react": "^1.13.19",
+    "@saberhq/eslint-config-react": "^2.1.0",
     "@saberhq/tsconfig": "^1.13.19",
     "@types/babel__core": "^7.1.19",
     "@yarnpkg/doctor": "^4.0.0-rc.6",
